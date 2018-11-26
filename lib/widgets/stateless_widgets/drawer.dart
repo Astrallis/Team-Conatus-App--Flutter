@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 
 class ConatusDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
+    void _navigate(String routePath) {
+      print(routePath);
+    }
+
     return Drawer(
       elevation: 20.0,
       child: ListView(
@@ -16,27 +20,39 @@ class ConatusDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text("HOME"),
-            onTap: () {},
+            onTap: () {
+              _navigate("home");
+            },
           ),
           ListTile(
             title: Text("GALLERY"),
-            onTap: () {},
+            onTap: () {
+              _navigate("gallery");
+            },
           ),
           ListTile(
             title: Text("FACULTY CO-ORDINATORS"),
-            onTap: () {},
+            onTap: () {
+              _navigate("faculty-coordinators");
+            },
           ),
           ListTile(
             title: Text("STUDENT CO-ORDINATORS"),
-            onTap: () {},
+            onTap: () {
+              _navigate("student-coordinators");
+            },
           ),
           ListTile(
             title: Text("EVENTS"),
-            onTap: () {},
+            onTap: () {
+              _navigate("events");
+            },
           ),
           ListTile(
             title: Text("CONTACT US"),
-            onTap: () {},
+            onTap: () {
+              _navigate("contact-us");
+            },
           ),
         ],
       ),
