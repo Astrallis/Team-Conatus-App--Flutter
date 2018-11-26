@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import '../widgets/stateless_widgets/drawer.dart';
 
 abstract class ContainerPage extends StatelessWidget {
 // Abstract methods
@@ -14,26 +15,7 @@ abstract class ContainerPage extends StatelessWidget {
             primaryColor: Colors.blue,
             accentColor: Colors.cyan),
         home: Scaffold(
-          drawer: Drawer(
-            elevation: 20.0,
-            child: new ListView(
-              children: <Widget>[
-                new DrawerHeader(
-                  child: new Text("DRAWER HEADER.."),
-                  decoration:
-                      new BoxDecoration(color: Theme.of(context).accentColor),
-                ),
-                new ListTile(
-                  title: new Text("Item => 1"),
-                  onTap: () {},
-                ),
-                new ListTile(
-                  title: new Text("Item => 2"),
-                  onTap: () {},
-                ),
-              ],
-            ),
-          ),
+          drawer: ConatusDrawer(),
           appBar: AppBar(
             title: Text(getAppBarTitle()),
           ),
