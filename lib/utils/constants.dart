@@ -1,3 +1,6 @@
+import 'package:flutter/widgets.dart';
+import '../page_exports.dart';
+
 class RouterConstants {
   static const String home = "/";
   static const String gallery = "/gallery";
@@ -5,4 +8,8 @@ class RouterConstants {
   static const String student_coordinators = "/student-coordinators";
   static const String events = "/events";
   static const String contact_us = "/contact-us";
+  static final Map<String, WidgetBuilder> routerMapping = {
+    home: (context) => HomePage(),
+    student_coordinators: (context) => StudentCoordinatorsPage()
+  };
 }
