@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 class StudentCoordinators extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.fromLTRB(10, 5, 10, 0),
+        padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
         child: GridView.count(
             crossAxisCount: 2,
             children: List.generate(20, (index) {
               return Container(
-                padding: EdgeInsets.fromLTRB(3,4,3,4),
+                  padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 3.0),
                   child: Card(
-                      elevation: 5,
+                      elevation: 5.0,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset("assets/images/user.png"),
-                          Container(height: 50),
+                          Container(height: 50.0),
                           Center(child: Text("Coordinator")),
                           Center(child: Text("4th year"))
                         ],
