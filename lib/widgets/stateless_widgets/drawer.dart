@@ -37,6 +37,7 @@ class ConatusDrawer extends StatelessWidget {
           ListTile(
             title: Text("STUDENT CO-ORDINATORS"),
             onTap: () {
+              print("clicked");
               Navigator.pushNamed(
                   context, RouterConstants.student_coordinators);
             },
