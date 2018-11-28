@@ -1,12 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import '../../utils/constants.dart';
 
 class ConatusDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
-    void _navigate(String routePath) {
-      print(routePath);
-    }
-
     return Drawer(
       elevation: 20.0,
       child: ListView(
@@ -21,37 +18,39 @@ class ConatusDrawer extends StatelessWidget {
           ListTile(
             title: Text("HOME"),
             onTap: () {
-              _navigate("home");
+              Navigator.pushNamed(context, RouterConstants.home);
             },
           ),
           ListTile(
             title: Text("GALLERY"),
             onTap: () {
-              _navigate("gallery");
+              Navigator.pushNamed(context, RouterConstants.gallery);
             },
           ),
           ListTile(
             title: Text("FACULTY CO-ORDINATORS"),
             onTap: () {
-              _navigate("faculty-coordinators");
+              Navigator.pushNamed(
+                  context, RouterConstants.faculty_coordinators);
             },
           ),
           ListTile(
             title: Text("STUDENT CO-ORDINATORS"),
             onTap: () {
-              _navigate("student-coordinators");
+              Navigator.pushNamed(
+                  context, RouterConstants.student_coordinators);
             },
           ),
           ListTile(
             title: Text("EVENTS"),
             onTap: () {
-              _navigate("events");
+              Navigator.pushNamed(context, RouterConstants.events);
             },
           ),
           ListTile(
             title: Text("CONTACT US"),
             onTap: () {
-              _navigate("contact-us");
+              Navigator.pushNamed(context, RouterConstants.contact_us);
             },
           ),
         ],
