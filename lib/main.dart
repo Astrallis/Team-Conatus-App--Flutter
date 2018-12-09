@@ -7,8 +7,8 @@ void main() {
       .then((_) {
     runApp(MaterialApp(
       theme: ThemeData(
-          brightness: Brightness.light,
-          primaryColor: Color(0xFF141414),
+          brightness: Brightness.dark,
+          primaryColor: Colors.red,
           accentColor: Color(0xFFBA2F16)),
       initialRoute: RouterConstants.home,
       routes: RouterConstants.routerMapping,

@@ -8,10 +8,12 @@ abstract class RouterConstants {
   static const String student_coordinators = "/student-coordinators";
   static const String events = "/events";
   static const String contact_us = "/contact-us";
-  
-  // final because it receive the context dynamically 
+
+  // final not const because it receive the context dynamically
+  // route mapping
   static final Map<String, WidgetBuilder> routerMapping = {
     home: (context) => HomePage(),
-    student_coordinators: (context) => StudentCoordinatorsPage()
+    student_coordinators: (context) => StudentCoordinatorsPage(),
+    faculty_coordinators: (context) => FacultyCoordinatorsPage()
   };
 }
