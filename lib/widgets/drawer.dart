@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
-import '../../utils/constants.dart';
+import '../utils/constants.dart';
 
 class ConatusDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -58,3 +58,4 @@ class ConatusDrawer extends StatelessWidget {
     );
   }
 }
+
