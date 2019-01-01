@@ -14,6 +14,7 @@ abstract class RouterConstants {
   static final Map<String, WidgetBuilder> routerMapping = {
     home: (context) => HomePage(),
     student_coordinators: (context) => StudentCoordinatorsPage(),
-    faculty_coordinators: (context) => FacultyCoordinatorsPage()
+    faculty_coordinators: (context) => FacultyCoordinatorsPage(),
+    gallery:(context) => GalleryPage(),
   };
 }
