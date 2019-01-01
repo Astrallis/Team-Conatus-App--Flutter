@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import './data.dart';
-import './page_transformer.dart';
+import '../data.dart';
+import 'package:conatus_app/utils/page_transformer/page_transformer.dart';
 
 class IntroPageItem extends StatelessWidget {
   IntroPageItem({

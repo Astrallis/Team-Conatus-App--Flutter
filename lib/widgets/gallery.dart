@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utils/data.dart';
-import '../utils/page_item.dart';
-import '../utils/page_transformer.dart';
+import 'package:conatus_app/utils/page_transformer/page_item.dart';
+import 'package:conatus_app/utils/page_transformer/page_transformer.dart';
 
 class Gallery extends StatelessWidget {
   @override
