@@ -15,4 +15,9 @@ class StudentCoordinatorsPage extends ContainerPage {
   Widget getContentWidget() {
     return StudentCoordinators();
   }
+
+  @override
+  bool showDrawer(){
+    return true;
+  }
 }

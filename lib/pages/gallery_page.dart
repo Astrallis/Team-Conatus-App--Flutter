@@ -15,4 +15,9 @@ class GalleryPage extends ContainerPage {
   Widget getContentWidget() {
     return Gallery();
   }
+
+  @override
+  bool showDrawer(){
+    return true;
+  }
 }
