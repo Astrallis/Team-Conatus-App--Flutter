@@ -15,4 +15,10 @@ class HomePage extends ContainerPage {
   Widget getContentWidget() {
     return Home();
   }
+
+  @override
+  bool showDrawer(){
+    return true;
+  }
+
 }
