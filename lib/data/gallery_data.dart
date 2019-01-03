@@ -2,10 +2,16 @@ import 'package:scoped_model/scoped_model.dart';
 import '../utils/conatus_enums.dart';
 
 class GalleryData extends Model {
-  List<String> _echelon = [];
-  List<String> _classes = [];
-  List<String> _odyssey = [];
-  List<String> _codeofiesta = [];
+  static const List<String> _echelon = [];
+  static const List<String> _classes = [];
+  static const List<String> _odyssey = [];
+  static const List<String> _codeofiesta = [];
+  static const urlMapping = {
+    Event.echelon: _echelon,
+    Event.classes: _classes,
+    Event.odyssey: _odyssey,
+    Event.codeofiesta: _codeofiesta
+  };
 
   Event _selectedEvent;
 
@@ -19,17 +25,7 @@ class GalleryData extends Model {
   /// This is similar to redux which is a better state management approach
 
   List<String> getImageUrls(Event event) {
-    switch (event) {
-      case Event.echelon:
-        return List.from(_echelon);
-      case Event.classes:
-        return List.from(_classes);
-      case Event.odyssey:
-        return List.from(_odyssey);
-      case Event.codeofiesta:
-        return List.from(_codeofiesta);
-      default:
-        return List.of(null);
-    }
+    return List.from(
+        urlMapping[event]); // Looks much more cleaner than switch case
   }
 }
