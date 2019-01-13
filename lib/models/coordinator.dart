@@ -19,3 +19,6 @@ class Coordinator {
       @required this.linkedinUrl,
       @required this.githubUrl});
 }
+
+
+
