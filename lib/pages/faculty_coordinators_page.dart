@@ -20,4 +20,9 @@ class FacultyCoordinatorsPage extends ContainerPage {
   bool showDrawer(){
     return true;
   }
+
+  @override
+  bool showAppBar() {
+    return true;
+  }
 }

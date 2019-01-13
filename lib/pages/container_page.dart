@@ -11,6 +11,8 @@ abstract class ContainerPage extends StatelessWidget {
 
   bool showDrawer();
 
+  bool showAppBar();
+
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: showDrawer() ? ConatusDrawer() : null,

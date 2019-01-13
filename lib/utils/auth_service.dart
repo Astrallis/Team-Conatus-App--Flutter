@@ -12,15 +12,16 @@ class ConatusAuth {
 
   Future get({@required url, data = ""}) {
     Map<String, String> options = {"params": data};
-    return http.get(url, headers: options).catchError(handleError);
+    return http.get(url, headers: options).catchError(_handleError);
   }
 
   Future post({@required url, body}) {
-    return http.post("url", body: body).catchError(handleError);
+    return http.post("url", body: body).catchError(_handleError);
   }
 
-  handleError(error) {
+  _handleError(error) {
     http.Response response = http.Response(error.toString(), 404);
     return response;
   }
+
 }
