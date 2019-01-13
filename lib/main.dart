@@ -7,6 +7,7 @@ void main() {
       .then((_) {
     runApp(MaterialApp(
       theme: ThemeData(
+        fontFamily: "Ubuntu",
           brightness: Brightness.dark,
           primaryColor: Colors.red,
           accentColor: Color(0xFFBA2F16)),

@@ -6,56 +6,85 @@ class ConatusDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 20.0,
-      child: ListView(
-        children: <Widget>[
-          DrawerHeader(
-            child: Text(
-              "CONATUS..",
-              style: TextStyle(fontSize: 20, color: Colors.white),
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: ExactAssetImage("assets/images/drawer-background.png"),
+              fit: BoxFit.cover),
+        ),
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader(child: Image.asset("assets/images/conatus.png"),),
+            Container(
+              height: 0.4,
+              decoration: BoxDecoration(color: Colors.white),
             ),
-            decoration: BoxDecoration(color: Theme.of(context).accentColor),
-          ),
-          ListTile(
-            title: Text("HOME"),
-            onTap: () {
-              Navigator.pushNamed(context, RouterConstants.home);
-            },
-          ),
-          ListTile(
-            title: Text("GALLERY"),
-            onTap: () {
-              Navigator.pushNamed(context, RouterConstants.gallery);
-            },
-          ),
-          ListTile(
-            title: Text("FACULTY CO-ORDINATORS"),
-            onTap: () {
-              Navigator.pushNamed(
-                  context, RouterConstants.faculty_coordinators);
-            },
-          ),
-          ListTile(
-            title: Text("STUDENT CO-ORDINATORS"),
-            onTap: () {
-              Navigator.pushNamed(
-                  context, RouterConstants.student_coordinators);
-            },
-          ),
-          ListTile(
-            title: Text("EVENTS"),
-            onTap: () {
-              Navigator.pushNamed(context, RouterConstants.events);
-            },
-          ),
-          ListTile(
-            title: Text("CONTACT US"),
-            onTap: () {
-              Navigator.pushNamed(context, RouterConstants.contact_us);
-            },
-          ),
-        ],
+            ListTile(
+              leading: Image.asset("assets/images/home.png"),
+              title: Text("Home", style: _getTextStyle()),
+              onTap: () {
+                Navigator.pushNamed(context, RouterConstants.home);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset("assets/images/event.png"),
+              title: Text("Events", style: _getTextStyle()),
+              onTap: () {
+                Navigator.pushNamed(context, RouterConstants.events);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset("assets/images/student.png"),
+              title: Text("Student Coordinators", style: _getTextStyle()),
+              onTap: () {
+                Navigator.pushNamed(
+                    context, RouterConstants.student_coordinators);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset("assets/images/faculty.png"),
+              title: Text("Faculty Coordinators", style: _getTextStyle()),
+              onTap: () {
+                Navigator.pushNamed(
+                    context, RouterConstants.faculty_coordinators);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset("assets/images/gallery.png"),
+              title: Text("Gallery", style: _getTextStyle()),
+              onTap: () {
+                Navigator.pushNamed(context, RouterConstants.gallery);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset("assets/images/contact.png"),
+              title: Text("Contact Us", style: _getTextStyle()),
+              onTap: () {
+                Navigator.pushNamed(context, RouterConstants.contact_us);
+              },
+            ),
+            _getContainer(),
+          ],
+        ),
       ),
     );
   }
-}
 
+  Widget _getContainer() {
+    return Container(
+      height: 0.2,
+      margin: EdgeInsets.only(left: 65.0, top: 10.0),
+      decoration: BoxDecoration(color: Colors.white),
+    );
+  }
+
+  TextStyle _getTextStyle() {
+    return TextStyle(
+        fontSize: 20.0, letterSpacing: 1.2, fontWeight: FontWeight.w300,fontFamily: "Ubuntu");
+  }
+}
