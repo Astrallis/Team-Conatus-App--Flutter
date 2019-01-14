@@ -50,6 +50,8 @@ flutter:
     - assets/images/gallery.png
     - assets/images/student.png
     - assets/images/conatus.png
+    - assets/images/menu.png
+    - assets/images/appbar.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
