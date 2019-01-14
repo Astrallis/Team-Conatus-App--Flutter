@@ -8,9 +8,9 @@ class ConatusAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double divheight = MediaQuery.of(context).size.height;
+    final double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
-      height: divheight / 2 * 0.23,
+      height: deviceHeight / 2 * 0.23,
       padding: EdgeInsets.only(top: 15.0),
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -24,7 +24,6 @@ class ConatusAppBar extends StatelessWidget {
           GestureDetector(
             child: Image.asset("assets/images/menu.png"),
             onTap: () {
-              print(key.toString());
               Scaffold.of(context).openDrawer();
             },
           ),
