@@ -11,27 +11,18 @@ abstract class ContainerPage extends StatelessWidget {
 
   bool showDrawer();
 
-  bool showAppBar();
+  int getAppBarColor();
 
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: showDrawer() ? ConatusDrawer() : null,
-//      body: Column(
-//        children: <Widget>[
-//          showAppBar()
-//              ? ConatusAppBar(
-//                  appBarTitle: getAppBarTitle(), showDrawer: showDrawer())
-//              : Container(),
-//          Expanded(child: getContentWidget())
-//        ],
-//      ),
       body: Stack(
         children: <Widget>[
           getContentWidget(),
-          showAppBar()
-              ? ConatusAppBar(
-                  appBarTitle: getAppBarTitle(), showDrawer: showDrawer())
-              : Container()
+          ConatusAppBar(
+              appBarTitle: getAppBarTitle(),
+              showDrawer: showDrawer(),
+              appBarColor:getAppBarColor())
         ],
       ),
     );

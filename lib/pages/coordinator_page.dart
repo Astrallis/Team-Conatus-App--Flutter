@@ -2,13 +2,13 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import './container_page.dart';
 import '../widgets/coordinator.dart';
+import '../utils/constants.dart';
 
 class CoordinatorPage extends ContainerPage{
-  static const _PAGE_TITLE = "Coordinator";
 
   @override
   String getAppBarTitle() {
-    return _PAGE_TITLE;
+    return null;
   }
 
   @override
@@ -17,13 +17,13 @@ class CoordinatorPage extends ContainerPage{
   }
 
   @override
-  bool showAppBar() {
+  bool showDrawer() {
     return false;
   }
 
   @override
-  bool showDrawer() {
-    return false;
+  int getAppBarColor() {
+    return ConatusColors.lightTransparent;
   }
 
 }

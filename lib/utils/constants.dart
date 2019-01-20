@@ -24,3 +24,9 @@ abstract class RouterConstants {
 abstract class Dimensions {
   static const double appBarHeight = 70.0;
 }
+
+abstract class ConatusColors {
+  static const int defaultAppBar = 0xFFB83227;
+  static const int transparent = 0xFF00000000;
+  static const int lightTransparent = 0xFF30000000;
+}

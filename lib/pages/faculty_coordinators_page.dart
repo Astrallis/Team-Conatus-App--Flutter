@@ -2,6 +2,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import './container_page.dart';
 import '../widgets/faculty_coordinators.dart';
+import '../utils/constants.dart';
 
 class FacultyCoordinatorsPage extends ContainerPage {
   static const String _PAGE_TITLE = "Faculty Co-ordinators";
@@ -22,7 +23,7 @@ class FacultyCoordinatorsPage extends ContainerPage {
   }
 
   @override
-  bool showAppBar() {
-    return true;
+  int getAppBarColor() {
+    return ConatusColors.defaultAppBar;
   }
 }

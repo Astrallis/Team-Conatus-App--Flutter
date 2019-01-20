@@ -2,6 +2,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import './container_page.dart';
 import '../widgets/gallery.dart';
+import '../utils/constants.dart';
 
 class GalleryPage extends ContainerPage {
   static const String _PAGE_TITLE = "Gallery";
@@ -22,7 +23,7 @@ class GalleryPage extends ContainerPage {
   }
 
   @override
-  bool showAppBar() {
-    return true;
+  int getAppBarColor() {
+    return ConatusColors.defaultAppBar;
   }
 }

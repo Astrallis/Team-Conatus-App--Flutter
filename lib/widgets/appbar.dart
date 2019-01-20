@@ -6,8 +6,12 @@ import '../utils/constants.dart';
 class ConatusAppBar extends StatelessWidget {
   final String appBarTitle;
   final bool showDrawer;
+  final int appBarColor;
 
-  ConatusAppBar({@required this.appBarTitle, @required this.showDrawer}) {}
+  ConatusAppBar(
+      {@required this.appBarTitle = "",
+      @required this.showDrawer,
+      this.appBarColor = 0}) {}
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +19,9 @@ class ConatusAppBar extends StatelessWidget {
       height: Dimensions.appBarHeight,
       padding: EdgeInsets.only(top: 15.0),
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/images/appbar.png"),
-          fit: BoxFit.cover,
-        ),
-      ),
+          color: appBarColor == 0
+              ? Color(ConatusColors.defaultAppBar)
+              : Color(appBarColor)),
       child: Row(
         children: <Widget>[
           Container(width: 15.0),
@@ -41,7 +43,7 @@ class ConatusAppBar extends StatelessWidget {
           ),
           Container(width: 35.0),
           Text(
-            appBarTitle,
+            appBarTitle != null ? appBarTitle : "",
             style: TextStyle(
                 fontSize: 28.0,
                 letterSpacing: 1.2,
