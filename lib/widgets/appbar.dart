@@ -40,7 +40,7 @@ class ConatusAppBar extends StatelessWidget {
               }
             },
           ),
-          Container(width: 35.0),
+          SizedBox(width: 35.0),
           Text(
             appBarTitle != null ? appBarTitle : "",
             style: TextStyle(

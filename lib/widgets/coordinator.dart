@@ -19,7 +19,17 @@ class Coordinator extends StatelessWidget {
                   margin: EdgeInsets.only(
                       top: Dimensions.coordinatorBackgroundHeight +
                           Dimensions.avatarRadius),
-                  child: Text("Hello naimish"),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "Naimish verma",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize:
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               Container(
