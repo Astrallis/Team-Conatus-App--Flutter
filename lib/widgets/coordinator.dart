@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Coordinator extends StatelessWidget {
-  final double topWidgetHeight = 200.0;
-  final double avatarRadius = 65.0;
+import '../utils/constants.dart';
 
+class Coordinator extends StatelessWidget {
   Widget build(BuildContext context) {
+    final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
     return Flex(
       direction: Axis.vertical,
       children: <Widget>[
@@ -12,20 +13,33 @@ class Coordinator extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Container(
-                height: topWidgetHeight,
-                color: Colors.yellow,
+                height: deviceHeight,
+                decoration:
+                    BoxDecoration(color: Color(ConatusColors.defaultAppBar)),
+                child: Container(
+                  width: deviceWidth,
+                  margin: EdgeInsets.only(
+                      top: Dimensions.coordinatorBackgroundHeight +
+                          Dimensions.avatarRadius),
+                  child: Text("Hello naimish"),
+                ),
               ),
               Container(
-                height: topWidgetHeight,
-                color: Colors.red,
+                height: Dimensions.coordinatorBackgroundHeight,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/coordinator-bg.png"),
+                      fit: BoxFit.cover),
+                ),
               ),
               Positioned(
                 child: CircleAvatar(
-                  radius: avatarRadius,
-                  backgroundColor: Colors.green,
+                  radius: Dimensions.avatarRadius,
+                  backgroundColor: Color(ConatusColors.lightTransparent),
                 ),
-                left: (MediaQuery.of(context).size.width / 2) - avatarRadius,
-                top: topWidgetHeight - avatarRadius,
+                left: (deviceWidth / 2) - Dimensions.avatarRadius,
+                top: Dimensions.coordinatorBackgroundHeight -
+                    Dimensions.avatarRadius,
               )
             ],
           ),

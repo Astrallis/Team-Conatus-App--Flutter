@@ -23,6 +23,8 @@ abstract class RouterConstants {
 
 abstract class Dimensions {
   static const double appBarHeight = 70.0;
+  static const double avatarRadius = 65.0;
+  static const double coordinatorBackgroundHeight = 220.0;
 }
 
 abstract class ConatusColors {
