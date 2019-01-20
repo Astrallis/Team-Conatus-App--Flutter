@@ -18,7 +18,7 @@ abstract class ContainerPage extends StatelessWidget {
       drawer: showDrawer() ? ConatusDrawer() : null,
       body: Column(
         children: <Widget>[
-          ConatusAppBar(appBarTitle: getAppBarTitle()),
+          ConatusAppBar(appBarTitle: getAppBarTitle(),showDrawer: showDrawer()),
           Expanded(child: getContentWidget())
         ],
       ),

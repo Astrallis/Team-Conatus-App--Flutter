@@ -3,8 +3,9 @@ import 'package:flutter/widgets.dart';
 
 class ConatusAppBar extends StatelessWidget {
   final String appBarTitle;
+  final bool showDrawer;
 
-  ConatusAppBar({@required this.appBarTitle}) {}
+  ConatusAppBar({@required this.appBarTitle, @required this.showDrawer}) {}
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +23,19 @@ class ConatusAppBar extends StatelessWidget {
         children: <Widget>[
           Container(width: 15.0),
           GestureDetector(
-            child: Image.asset("assets/images/menu.png"),
+            child: showDrawer
+                ? Image.asset("assets/images/menu.png")
+                : Image.asset("assets/images/back.png"),
             onTap: () {
-              Scaffold.of(context).openDrawer();
+              if (showDrawer) {
+                Scaffold.of(context).openDrawer();
+              } else {
+                // Checks wheather the current route can pe popped out or not
+                if (ModalRoute.of(context).canPop) {
+                  Navigator.of(context).pop();
+                }
+                ;
+              }
             },
           ),
           Container(width: 35.0),
