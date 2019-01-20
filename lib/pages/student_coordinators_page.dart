@@ -18,7 +18,7 @@ class StudentCoordinatorsPage extends ContainerPage {
 
   @override
   bool showDrawer() {
-    return true;
+    return false;
   }
 
   @override
