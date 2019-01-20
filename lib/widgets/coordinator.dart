@@ -67,7 +67,7 @@ class Coordinator extends StatelessWidget {
               Positioned(
                 child: CircleAvatar(
                   radius: Dimensions.avatarRadius,
-                  backgroundColor: Color(ConatusColors.lightTransparent),
+                  backgroundImage: AssetImage("assets/images/avatar.jpeg"),
                 ),
                 left: (deviceWidth / 2) - Dimensions.avatarRadius,
                 top: Dimensions.coordinatorBackgroundHeight -
