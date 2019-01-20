@@ -16,10 +16,22 @@ abstract class ContainerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: showDrawer() ? ConatusDrawer() : null,
-      body: Column(
+//      body: Column(
+//        children: <Widget>[
+//          showAppBar()
+//              ? ConatusAppBar(
+//                  appBarTitle: getAppBarTitle(), showDrawer: showDrawer())
+//              : Container(),
+//          Expanded(child: getContentWidget())
+//        ],
+//      ),
+      body: Stack(
         children: <Widget>[
-          ConatusAppBar(appBarTitle: getAppBarTitle(),showDrawer: showDrawer()),
-          Expanded(child: getContentWidget())
+          getContentWidget(),
+          showAppBar()
+              ? ConatusAppBar(
+                  appBarTitle: getAppBarTitle(), showDrawer: showDrawer())
+              : Container()
         ],
       ),
     );

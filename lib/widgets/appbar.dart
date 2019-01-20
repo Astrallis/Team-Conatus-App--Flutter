@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../utils/constants.dart';
+
 class ConatusAppBar extends StatelessWidget {
   final String appBarTitle;
   final bool showDrawer;
@@ -9,9 +11,8 @@ class ConatusAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
-      height: deviceHeight / 2 * 0.23,
+      height: Dimensions.appBarHeight,
       padding: EdgeInsets.only(top: 15.0),
       decoration: BoxDecoration(
         image: DecorationImage(

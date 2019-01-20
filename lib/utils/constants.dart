@@ -8,6 +8,7 @@ abstract class RouterConstants {
   static const String student_coordinators = "/student-coordinators";
   static const String events = "/events";
   static const String contact_us = "/contact-us";
+  static const String coordinator = "/coordinator";
 
   // final not const because it receive the context dynamically
   // route mapping
@@ -15,6 +16,11 @@ abstract class RouterConstants {
     home: (context) => HomePage(),
     student_coordinators: (context) => StudentCoordinatorsPage(),
     faculty_coordinators: (context) => FacultyCoordinatorsPage(),
-    gallery:(context) => GalleryPage(),
+    gallery: (context) => GalleryPage(),
+    coordinator: (context) => CoordinatorPage(),
   };
+}
+
+abstract class Dimensions {
+  static const double appBarHeight = 70.0;
 }
