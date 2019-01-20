@@ -37,7 +37,6 @@ class ConatusAppBar extends StatelessWidget {
                 if (ModalRoute.of(context).canPop) {
                   Navigator.of(context).pop();
                 }
-                ;
               }
             },
           ),

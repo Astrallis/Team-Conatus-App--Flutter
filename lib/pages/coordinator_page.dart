@@ -23,7 +23,7 @@ class CoordinatorPage extends ContainerPage{
 
   @override
   int getAppBarColor() {
-    return ConatusColors.lightTransparent;
+    return ConatusColors.transparent;
   }
 
 }

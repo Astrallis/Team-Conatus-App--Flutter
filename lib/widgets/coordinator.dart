@@ -5,23 +5,30 @@ class Coordinator extends StatelessWidget {
   final double avatarRadius = 65.0;
 
   Widget build(BuildContext context) {
-    return Stack(
+    return Flex(
+      direction: Axis.vertical,
       children: <Widget>[
-        Container(
-          height: topWidgetHeight,
-          color: Colors.yellow,
-        ),
-        Container(
-          height: topWidgetHeight,
-          color: Colors.red,
-        ),
-        Positioned(
-          child: CircleAvatar(
-            radius: avatarRadius,
-            backgroundColor: Colors.green,
+        Expanded(
+          child: Stack(
+            children: <Widget>[
+              Container(
+                height: topWidgetHeight,
+                color: Colors.yellow,
+              ),
+              Container(
+                height: topWidgetHeight,
+                color: Colors.red,
+              ),
+              Positioned(
+                child: CircleAvatar(
+                  radius: avatarRadius,
+                  backgroundColor: Colors.green,
+                ),
+                left: (MediaQuery.of(context).size.width / 2) - avatarRadius,
+                top: topWidgetHeight - avatarRadius,
+              )
+            ],
           ),
-          left: (MediaQuery.of(context).size.width / 2) - avatarRadius,
-          top: topWidgetHeight - avatarRadius,
         )
       ],
     );
