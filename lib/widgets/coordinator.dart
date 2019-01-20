@@ -18,15 +18,39 @@ class Coordinator extends StatelessWidget {
                   width: deviceWidth,
                   margin: EdgeInsets.only(
                       top: Dimensions.coordinatorBackgroundHeight +
-                          Dimensions.avatarRadius),
+                          Dimensions.avatarRadius +
+                          Dimensions.gap),
                   child: Column(
                     children: <Widget>[
                       Text(
                         "Naimish verma",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize:
-                        ),
+                        style: TextStyle(fontSize: ConatusFonts.large),
+                      ),
+                      SizedBox(height: Dimensions.gap),
+                      Text(
+                        "Coordinator 3rd Year",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: ConatusFonts.small),
+                      ),
+                      SizedBox(height: Dimensions.gap*2),
+                      Text(
+                        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolor vero tenetur saepe voluptatum temporibus totam cupiditate quae amet Sit veniam pariatur saepe ipsam ad numquam dignissimos sint architecto in Lorem ipsum dolor sit amet consectetur, Sed dolor vero tenetur saepe voluptatum tempo ribadipisicing m dolor sit amet consectetur, adipisicing elit.",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: ConatusFonts.extraSmall),
+                      ),
+                      SizedBox(height: Dimensions.gap*3),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset("assets/images/facebook.png"),
+                          SizedBox(width: Dimensions.gap*2),
+                          Image.asset("assets/images/instagram.png"),
+                          SizedBox(width: Dimensions.gap*2),
+                          Image.asset("assets/images/linkedin.png"),
+                          SizedBox(width: Dimensions.gap*2),
+                          Image.asset("assets/images/github.png")
+                        ],
                       )
                     ],
                   ),
