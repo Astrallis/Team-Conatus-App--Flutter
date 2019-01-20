@@ -14,8 +14,6 @@ class Coordinator extends StatelessWidget {
             children: <Widget>[
               Container(
                 height: deviceHeight,
-                decoration:
-                    BoxDecoration(color: Color(ConatusColors.defaultAppBar)),
                 child: Container(
                   width: deviceWidth,
                   margin: EdgeInsets.only(
