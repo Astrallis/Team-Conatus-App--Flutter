@@ -1,6 +1,6 @@
 import 'package:scoped_model/scoped_model.dart';
-import '../utils/auth_service.dart';
-import '../models/coordinator.dart';
+import '../../utils/auth_service.dart';
+import '../../models/coordinator.dart';
 
 class CoordinatorsData extends Model {
   static const String apiUrl = "https://conatus-app.firebaseio.com";

@@ -1,5 +1,5 @@
 import 'package:scoped_model/scoped_model.dart';
-import '../utils/conatus_enums.dart';
+import '../../utils/conatus_enums.dart';
 
 class GalleryData extends Model {
   static const List<String> _birthday = [];

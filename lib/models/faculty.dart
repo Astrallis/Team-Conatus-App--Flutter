@@ -1,5 +1,4 @@
 import 'package:meta/meta.dart';
-import '../utils/conatus_enums.dart';
 
 class Faculty {
   String name;

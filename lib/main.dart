@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show DeviceOrientation, SystemChrome;
 import 'utils/constants.dart';
 import 'package:scoped_model/scoped_model.dart';
-import './data/root.dart';
+import 'package:conatus_app/data/scoped_model/root.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
