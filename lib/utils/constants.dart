@@ -36,7 +36,8 @@ abstract class ConatusFonts {
 }
 
 abstract class ConatusColors {
-  static const int defaultAppBar = 0xFFB83227;
+  static const int colorPrimary = 0xFFB83227;
+  static const int colorAccent = 0xFFBA2F16;
   static const int transparent = 0xFF00000000;
   static const int lightTransparent = 0xFF30000000;
 }

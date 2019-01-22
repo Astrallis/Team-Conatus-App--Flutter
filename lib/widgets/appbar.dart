@@ -20,7 +20,7 @@ class ConatusAppBar extends StatelessWidget {
       padding: EdgeInsets.only(top: 15.0),
       decoration: BoxDecoration(
           color: appBarColor == 0
-              ? Color(ConatusColors.defaultAppBar)
+              ? Color(ConatusColors.colorPrimary)
               : Color(appBarColor)),
       child: Row(
         children: <Widget>[

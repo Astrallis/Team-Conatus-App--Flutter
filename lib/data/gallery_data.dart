@@ -2,12 +2,12 @@ import 'package:scoped_model/scoped_model.dart';
 import '../utils/conatus_enums.dart';
 
 class GalleryData extends Model {
-  static const List<String> _echelon = [];
+  static const List<String> _birthday = [];
   static const List<String> _classes = [];
   static const List<String> _odyssey = [];
   static const List<String> _codeofiesta = [];
   static const urlMapping = {
-    Event.echelon: _echelon,
+    Event.echelon: _birthday,
     Event.classes: _classes,
     Event.odyssey: _odyssey,
     Event.codeofiesta: _codeofiesta

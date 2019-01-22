@@ -24,6 +24,6 @@ class FacultyCoordinatorsPage extends ContainerPage {
 
   @override
   int getAppBarColor() {
-    return ConatusColors.defaultAppBar;
+    return ConatusColors.colorPrimary;
   }
 }

@@ -13,8 +13,8 @@ void main() {
           theme: ThemeData(
               fontFamily: "Ubuntu",
               brightness: Brightness.dark,
-              primaryColor: Colors.red,
-              accentColor: Color(0xFFBA2F16)),
+              primaryColor: Color(ConatusColors.colorPrimary),
+              accentColor: Color(ConatusColors.colorAccent)),
           initialRoute: RouterConstants.home,
           routes: RouterConstants.routerMapping,
         )));
