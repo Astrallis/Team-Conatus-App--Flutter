@@ -2,27 +2,41 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/constants.dart';
+import '../utils/conatus_utils.dart';
 
 class FacultyCoordinators extends StatelessWidget {
   Widget build(BuildContext context) {
+    final double deviceWidth = MediaQuery.of(context).size.width;
     return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/college.png"),
+          fit: BoxFit.cover
+        ),
+      ),
       margin: EdgeInsets.only(top: Dimensions.appBarHeight),
       padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
       child: ListView(
         scrollDirection: Axis.vertical,
         children: List.generate(4, (index) {
           return Container(
-            height: 350.0,
-            padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 3.0),
+            height: ConatusUtils.getCardRadius(deviceWidth)*2,
+            padding: EdgeInsets.symmetric(horizontal: 3.0),
             child: Card(
-              margin: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
-              elevation: 5.0,
+              color: Color(ConatusColors.lightTransparent),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0)
+              ) ,
+              margin: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image.asset("assets/images/user.png"),
+                  CircleAvatar(
+                    radius: Dimensions.avatarRadius,
+                    backgroundImage: AssetImage("assets/images/avatar.jpeg"),
+                  ),
                   Container(height: 50.0),
-                  Center(child: Text("Coordinator")),
+                  Center(child: Text("Coordinator",style: TextStyle(fontSize: ConatusFonts.medium),)),
                   Center(child: Text("4th year"))
                 ],
               ),

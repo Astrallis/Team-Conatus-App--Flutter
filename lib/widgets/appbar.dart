@@ -44,7 +44,7 @@ class ConatusAppBar extends StatelessWidget {
           Text(
             appBarTitle != null ? appBarTitle : "",
             style: TextStyle(
-                fontSize: ConatusFonts.large,
+                fontSize: ConatusFonts.medium,
                 letterSpacing: 1.2,
                 fontWeight: FontWeight.w400,
                 fontFamily: "Ubuntu"),
