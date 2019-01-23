@@ -25,7 +25,7 @@ abstract class Dimensions {
   static const double appBarHeight = 70.0;
   static const double avatarRadius = 65.0;
   static const double gap = 10.0;
-  static const double coordinatorBackgroundHeight = 220.0;
+  static const double coordinatorBackgroundHeight = 240.0;
 }
 
 abstract class ConatusFonts {
@@ -40,4 +40,5 @@ abstract class ConatusColors {
   static const int colorAccent = 0xFFBA2F16;
   static const int transparent = 0xFF00000000;
   static const int lightTransparent = 0xFF30000000;
+  static const int bgc = 0xFF505050 ;
 }

@@ -6,7 +6,7 @@ import '../utils/conatus_utils.dart';
 import '../models/faculty.dart';
 import '../data/faculty_data.dart';
 
-class FacultyCoordinators extends StatelessWidget {
+class FacultyCoordinators extends StatelessWidget{
   Widget build(BuildContext context) {
     final double deviceWidth = MediaQuery.of(context).size.width;
     final List<Faculty> faculty = FacultyData.facultiesData;
