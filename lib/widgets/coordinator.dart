@@ -1,7 +1,21 @@
 import '../utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Coordinator extends StatelessWidget {
+  _launchURL() async {
+    try {
+      const url = 'https://github.com/naimishverma17';
+      if (await canLaunch(url)) {
+        await launch(url, forceWebView: true, forceSafariVC: true);
+      } else {
+        throw 'Could not launch $url';
+      }
+    } catch (Ex) {
+      print(Ex);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +58,12 @@ class Coordinator extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset("assets/images/facebook.png"),
+              GestureDetector(
+                onTap: () {
+                  _launchURL();
+                },
+                child: Image.asset("assets/images/facebook.png"),
+              ),
               SizedBox(width: Dimensions.gap * 2),
               Image.asset("assets/images/instagram.png"),
               SizedBox(width: Dimensions.gap * 2),
