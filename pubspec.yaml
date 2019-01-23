@@ -56,7 +56,6 @@ flutter:
     - assets/images/menu.png
     - assets/images/appbar.png
     - assets/images/back.png
-    - assets/images/coordinator-bg.png
     - assets/images/linkedin.png
     - assets/images/facebook.png
     - assets/images/github.png
