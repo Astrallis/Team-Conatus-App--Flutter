@@ -1,6 +1,9 @@
-import '../utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../utils/constants.dart';
+import './tagline.dart';
+
 
 class Coordinator extends StatelessWidget {
   _launchURL() async {
@@ -73,25 +76,7 @@ class Coordinator extends StatelessWidget {
             ],
           ),
           SizedBox(height: Dimensions.gap * 4),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                "Learn",
-                style: TextStyle(fontSize: ConatusFonts.extraSmall),
-              ),
-              SizedBox(width: Dimensions.gap),
-              Text(
-                "Improvise",
-                style: TextStyle(fontSize: ConatusFonts.extraSmall),
-              ),
-              SizedBox(width: Dimensions.gap),
-              Text(
-                "Grow",
-                style: TextStyle(fontSize: ConatusFonts.extraSmall),
-              ),
-            ],
-          ),
+          Tagline(),
         ],
       ),
     );

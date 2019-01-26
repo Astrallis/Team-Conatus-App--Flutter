@@ -64,6 +64,8 @@ flutter:
     - assets/images/avatar.jpeg
     - assets/images/college.png
     - assets/images/lts.png
+    - assets/images/home-bg.png
+    - assets/images/circle.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
