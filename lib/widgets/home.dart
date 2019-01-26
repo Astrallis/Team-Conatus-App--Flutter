@@ -17,7 +17,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   initState() {
     super.initState();
     _animationController = AnimationController(
-        duration: const Duration(milliseconds: 4000), vsync: this);
+        duration: const Duration(milliseconds: 5000), vsync: this);
     _animation = Tween(begin: 250.0, end: 400.0).animate(_animationController)
       ..addListener(() {
         setState(() {});
