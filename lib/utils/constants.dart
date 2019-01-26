@@ -25,6 +25,7 @@ abstract class Dimensions {
   static const double appBarHeight = 70.0;
   static const double avatarRadius = 65.0;
   static const double gap = 10.0;
+  static const double dotSize = 8.0;
   static const double buttonRadius = 8.0;
   static const double buttonHeight = 45.0;
   static const double coordinatorBackgroundHeight = 240.0;

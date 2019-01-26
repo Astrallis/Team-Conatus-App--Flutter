@@ -10,21 +10,27 @@ class Tagline extends StatelessWidget {
       children: <Widget>[
         Text(
           "Learn",
-          style: TextStyle(fontSize: ConatusFonts.medium),
+          style: TextStyle(fontSize: ConatusFonts.small),
         ),
         SizedBox(width: Dimensions.gap),
-        Image.asset("assets/images/circle.png"),
+        SizedBox(
+          height: Dimensions.dotSize,
+          child: Image.asset("assets/images/circle.png"),
+        ),
         SizedBox(width: Dimensions.gap),
         Text(
           "Improvise",
-          style: TextStyle(fontSize: ConatusFonts.medium),
+          style: TextStyle(fontSize: ConatusFonts.small),
         ),
         SizedBox(width: Dimensions.gap),
-        Image.asset("assets/images/circle.png"),
+        SizedBox(
+          height: Dimensions.dotSize,
+          child: Image.asset("assets/images/circle.png"),
+        ),
         SizedBox(width: Dimensions.gap),
         Text(
           "Grow",
-          style: TextStyle(fontSize: ConatusFonts.medium),
+          style: TextStyle(fontSize: ConatusFonts.small),
         ),
       ],
     );
