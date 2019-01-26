@@ -12,7 +12,6 @@ class ConatusUtils {
 
   static double getCardRadius(double deviceWidth) {
     final cardWidth = deviceWidth - 70;
-    print(cardWidth/2);
     return cardWidth/2;
   }
 
