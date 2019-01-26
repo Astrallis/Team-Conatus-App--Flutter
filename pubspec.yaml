@@ -66,6 +66,10 @@ flutter:
     - assets/images/lts.png
     - assets/images/home-bg.png
     - assets/images/circle.png
+    - assets/images/anu-sir.jpeg
+    - assets/images/deepak-sir.jpeg
+    - assets/images/rohit-sir.jpeg
+    - assets/images/sunita-mam.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

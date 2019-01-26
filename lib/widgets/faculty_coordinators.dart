@@ -35,7 +35,7 @@ class FacultyCoordinators extends StatelessWidget{
                     radius: Dimensions.avatarRadius,
                     backgroundImage: AssetImage(faculty[index].profileUrl),
                   ),
-                  Container(height: 50.0),
+                  SizedBox(height: Dimensions.gap*2),
                   Center(
                     child: Text(
                       faculty[index].name,
