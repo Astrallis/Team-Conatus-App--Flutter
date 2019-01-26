@@ -18,12 +18,15 @@ class Home extends StatelessWidget {
       ),
       child: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(top: Dimensions.appBarHeight),
+          margin: EdgeInsets.only(top: 120.0),
           padding: EdgeInsets.all(Dimensions.gap),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Image.asset("assets/images/conatus.png"),
+              Image(
+                image: AssetImage("assets/images/conatua-text.png"),
+                height: 90,
+              ),
               SizedBox(
                 height: Dimensions.gap,
               ),
