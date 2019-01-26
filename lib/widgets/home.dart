@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
               ),
               Text(
                 _ABOUT,
-                textAlign: TextAlign.justify,
+                textAlign: TextAlign.center,
                 style: TextStyle(fontSize: ConatusFonts.small),
               )
             ],
