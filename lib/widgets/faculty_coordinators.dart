@@ -6,7 +6,7 @@ import '../utils/conatus_utils.dart';
 import '../models/faculty.dart';
 import '../data/faculty_data.dart';
 
-class FacultyCoordinators extends StatelessWidget{
+class FacultyCoordinators extends StatelessWidget {
   Widget build(BuildContext context) {
     final double deviceWidth = MediaQuery.of(context).size.width;
     final List<Faculty> faculty = FacultyData.facultiesData;
@@ -16,7 +16,7 @@ class FacultyCoordinators extends StatelessWidget{
             image: AssetImage("assets/images/college.png"), fit: BoxFit.cover),
       ),
       margin: EdgeInsets.only(top: Dimensions.appBarHeight),
-      padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+      padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
       child: ListView(
         scrollDirection: Axis.vertical,
         children: List.generate(4, (index) {
@@ -31,11 +31,20 @@ class FacultyCoordinators extends StatelessWidget{
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CircleAvatar(
-                    radius: Dimensions.avatarRadius,
-                    backgroundImage: AssetImage(faculty[index].profileUrl),
+                  Container(
+                    height: Dimensions.avatarRadius*2,
+                    width: Dimensions.avatarRadius*2,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(faculty[index].profileUrl),
+                        fit: BoxFit.fill
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(Dimensions.avatarRadius),
+                      ),
+                    ),
                   ),
-                  SizedBox(height: Dimensions.gap*2),
+                  SizedBox(height: Dimensions.gap * 2),
                   Center(
                     child: Text(
                       faculty[index].name,
