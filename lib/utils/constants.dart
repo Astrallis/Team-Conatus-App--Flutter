@@ -9,6 +9,7 @@ abstract class RouterConstants {
   static const String events = "/events";
   static const String contact_us = "/contact-us";
   static const String coordinator = "/coordinator";
+  static const String registration = "/registration";
 
   // final not const because it receive the context dynamically
   // route mapping
@@ -18,6 +19,7 @@ abstract class RouterConstants {
     faculty_coordinators: (context) => FacultyCoordinatorsPage(),
     gallery: (context) => GalleryPage(),
     coordinator: (context) => CoordinatorPage(),
+    registration: (context) => CRegistrationPage(),
   };
 }
 

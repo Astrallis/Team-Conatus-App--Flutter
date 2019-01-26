@@ -35,7 +35,9 @@ class Home extends StatelessWidget {
                 height: Dimensions.gap * 3,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, RouterConstants.registration);
+                },
                 child: Container(
                   decoration: BoxDecoration(
                     color: Color(ConatusColors.colorPrimary),
