@@ -25,19 +25,21 @@ abstract class RouterConstants {
 
 abstract class Dimensions {
   static const double appBarHeight = 70.0;
-  static const double avatarRadius = 75.0;
+  static const double avatarRadius = 60.0;
   static const double gap = 10.0;
   static const double dotSize = 8.0;
   static const double buttonRadius = 8.0;
   static const double buttonHeight = 45.0;
+  static const double iconsHeight = 18.0;
+  static const double iconsWidth = 18.0;
   static const double coordinatorBackgroundHeight = 240.0;
 }
 
 abstract class ConatusFonts {
-  static const double large = 28.0;
-  static const double medium = 24.0;
-  static const double small = 20.0;
-  static const double extraSmall = 18.0;
+  static const double large = 22.0;
+  static const double medium = 20.0;
+  static const double small = 17.0;
+  static const double extraSmall = 15.0;
 }
 
 abstract class ConatusColors {

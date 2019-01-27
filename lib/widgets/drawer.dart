@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/constants.dart';
 
 class ConatusDrawer extends StatelessWidget {
+  static const double _ICON_SIZE = 22.0;
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 20.0,
@@ -22,7 +23,11 @@ class ConatusDrawer extends StatelessWidget {
               decoration: BoxDecoration(color: Colors.white),
             ),
             ListTile(
-              leading: Image.asset("assets/images/home.png"),
+              leading: Image.asset(
+                "assets/images/home.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
               title: Text("Home", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.home);
@@ -30,7 +35,11 @@ class ConatusDrawer extends StatelessWidget {
             ),
             _getContainer(),
             ListTile(
-              leading: Image.asset("assets/images/event.png"),
+              leading: Image.asset(
+                "assets/images/event.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
               title: Text("Events", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.events);
@@ -38,7 +47,11 @@ class ConatusDrawer extends StatelessWidget {
             ),
             _getContainer(),
             ListTile(
-              leading: Image.asset("assets/images/student.png"),
+              leading: Image.asset(
+                "assets/images/student.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
               title: Text("Student Coordinators", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.student_coordinators);
@@ -46,7 +59,11 @@ class ConatusDrawer extends StatelessWidget {
             ),
             _getContainer(),
             ListTile(
-              leading: Image.asset("assets/images/faculty.png"),
+              leading: Image.asset(
+                "assets/images/faculty.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
               title: Text("Faculty Coordinators", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.faculty_coordinators);
@@ -54,7 +71,11 @@ class ConatusDrawer extends StatelessWidget {
             ),
             _getContainer(),
             ListTile(
-              leading: Image.asset("assets/images/gallery.png"),
+              leading: Image.asset(
+                "assets/images/gallery.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
               title: Text("Gallery", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.gallery);
@@ -62,7 +83,11 @@ class ConatusDrawer extends StatelessWidget {
             ),
             _getContainer(),
             ListTile(
-              leading: Image.asset("assets/images/contact.png"),
+              leading: Image.asset(
+                "assets/images/contact.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
               title: Text("Contact Us", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.contact_us);
@@ -78,14 +103,14 @@ class ConatusDrawer extends StatelessWidget {
   Widget _getContainer() {
     return Container(
       height: 0.2,
-      margin: EdgeInsets.only(left: 65.0, top: 10.0),
+      margin: EdgeInsets.only(left: 65.0, top: 7.0),
       decoration: BoxDecoration(color: Colors.white),
     );
   }
 
   TextStyle _getTextStyle() {
     return TextStyle(
-        fontSize: 20.0,
+        fontSize: ConatusFonts.small,
         letterSpacing: 1.2,
         fontWeight: FontWeight.w300,
         fontFamily: "Ubuntu");

@@ -22,11 +22,10 @@ class FacultyCoordinators extends StatelessWidget {
         children: List.generate(4, (index) {
           return Container(
             height: ConatusUtils.getCardRadius(deviceWidth) * 2,
-            padding: EdgeInsets.symmetric(horizontal: 3.0),
             child: Card(
               color: Color(ConatusColors.lightTransparent),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0)),
+                  borderRadius: BorderRadius.circular(15.0)),
               margin: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

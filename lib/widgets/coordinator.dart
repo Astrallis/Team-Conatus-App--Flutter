@@ -4,7 +4,6 @@ import 'package:url_launcher/url_launcher.dart';
 import '../utils/constants.dart';
 import './tagline.dart';
 
-
 class Coordinator extends StatelessWidget {
   _launchURL() async {
     try {
@@ -65,14 +64,32 @@ class Coordinator extends StatelessWidget {
                 onTap: () {
                   _launchURL();
                 },
-                child: Image.asset("assets/images/facebook.png"),
+                child: Image.asset(
+                  "assets/images/facebook.png",
+                  width: Dimensions.iconsWidth,
+                  height: Dimensions.iconsHeight,
+                ),
               ),
               SizedBox(width: Dimensions.gap * 2),
-              Image.asset("assets/images/instagram.png"),
+              Image.asset(
+                "assets/images/instagram.png",
+                width: Dimensions.iconsWidth,
+                height: Dimensions.iconsHeight,
+              ),
+              SizedBox(
+                width: Dimensions.gap * 2,
+              ),
+              Image.asset(
+                "assets/images/linkedin.png",
+                width: Dimensions.iconsWidth,
+                height: Dimensions.iconsHeight,
+              ),
               SizedBox(width: Dimensions.gap * 2),
-              Image.asset("assets/images/linkedin.png"),
-              SizedBox(width: Dimensions.gap * 2),
-              Image.asset("assets/images/github.png")
+              Image.asset(
+                "assets/images/github.png",
+                width: Dimensions.iconsWidth,
+                height: Dimensions.iconsHeight,
+              )
             ],
           ),
           SizedBox(height: Dimensions.gap * 4),
