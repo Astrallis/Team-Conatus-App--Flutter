@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import '../utils/data.dart';
-import 'package:conatus_app/utils/page_transformer/page_item.dart';
-import 'package:conatus_app/utils/page_transformer/page_transformer.dart';
+
+import '../data/gallery_data.dart';
+import '../utils/page_transformer/page_item.dart';
+import '../utils/page_transformer/page_transformer.dart';
 
 class Gallery extends StatelessWidget {
+  List  _gallery = GalleryData.galleryData;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -13,9 +16,9 @@ class Gallery extends StatelessWidget {
           pageViewBuilder: (context, visibilityResolver) {
             return PageView.builder(
               controller: PageController(viewportFraction: 0.85),
-              itemCount: sampleItems.length,
+              itemCount: _gallery.length,
               itemBuilder: (context, index) {
-                final item = sampleItems[index];
+                final item = _gallery[index];
                 final pageVisibility =
                     visibilityResolver.resolvePageVisibility(index);
 

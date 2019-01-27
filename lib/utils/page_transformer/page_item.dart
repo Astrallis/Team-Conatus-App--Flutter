@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import '../data.dart';
 import 'package:conatus_app/utils/page_transformer/page_transformer.dart';
+import '../../models/gallery.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class IntroPageItem extends StatelessWidget {
   IntroPageItem({
@@ -9,7 +10,7 @@ class IntroPageItem extends StatelessWidget {
     @required this.pageVisibility,
   });
 
-  final IntroItem item;
+  final Gallery item;
   final PageVisibility pageVisibility;
 
   Widget _applyTextEffects({
@@ -48,19 +49,6 @@ class IntroPageItem extends StatelessWidget {
       ),
     );
 
-    var titleText = _applyTextEffects(
-      translationFactor: 200.0,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 16.0),
-        child: Text(
-          item.title,
-          style: textTheme.title
-              .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-          textAlign: TextAlign.center,
-        ),
-      ),
-    );
-
     return Positioned(
       bottom: 56.0,
       left: 32.0,
@@ -69,7 +57,6 @@ class IntroPageItem extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           categoryText,
-          titleText,
         ],
       ),
     );
@@ -77,8 +64,8 @@ class IntroPageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var image = Image.asset(
-      item.imageUrl,
+    var image = CachedNetworkImage(
+      imageUrl:item.imageUrl,
       fit: BoxFit.cover,
       alignment: FractionalOffset(
         0.5 + (pageVisibility.pagePosition / 3),
