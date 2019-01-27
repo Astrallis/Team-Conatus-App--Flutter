@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+
 import '../utils/constants.dart';
 import './tagline.dart';
+import './conatus_button.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,6 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   static const String _ABOUT =
       """Leading the technical upfront, Conatus is the Computer Science and Information Technology society of Ajay Kumar Garg Engineering College. "Conatus" means "impulsive force" as it brings the students to the unexplored "technical horizon" within their grasp. Conatus stands on the objective of guiding the students towards the dawn of a better and successful tomorrow with its marvellous events, workshops, seminars and classes for the students of the college to thrive towards a brighter and a technically sound future.""";
+  static const String _BUTTON_TEXT = "Register for C classes";
   Animation _animation;
   AnimationController _animationController;
 
@@ -63,33 +66,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               SizedBox(
                 height: Dimensions.gap * 3,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, RouterConstants.registration);
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Color(ConatusColors.colorPrimary),
-                    boxShadow: <BoxShadow>[
-                      BoxShadow(
-                        color: Color(ConatusColors.colorPrimary),
-                        blurRadius: 13.0,
-                      ),
-                    ],
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(Dimensions.buttonRadius),
-                    ),
-                  ),
-                  width: _width / 2,
-                  height: Dimensions.buttonHeight,
-                  alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 3.0),
-                  child: Text(
-                    "Register for C classes",
-                    style: TextStyle(fontSize: ConatusFonts.small),
-                  ),
-                ),
-              ),
+              ConatusButton(text: _BUTTON_TEXT, onClick: _onClick),
               SizedBox(
                 height: Dimensions.gap * 3,
               ),
@@ -103,5 +80,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
       ),
     );
+  }
+
+  void _onClick() {
+    Navigator.pushNamed(context, RouterConstants.registration);
   }
 }

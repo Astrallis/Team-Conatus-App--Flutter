@@ -22,7 +22,7 @@ class StudentCoordinators extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset("assets/images/user.png"),
+                      Image.asset("assets/images/avatar.jpeg"),
                       Container(height: 50.0),
                       Center(child: Text("Coordinator")),
                       Center(child: Text("4th year"))
