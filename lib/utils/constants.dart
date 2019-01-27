@@ -47,5 +47,6 @@ abstract class ConatusColors {
   static const int colorAccent = 0xFFBA2F16;
   static const int transparent = 0xFF00000000;
   static const int lightTransparent = 0xFF30000000;
+  static const int darkTransparent = 0xFF99000000;
   static const int bgc = 0xFF505050 ;
 }

@@ -29,7 +29,7 @@ class ConatusButton extends StatelessWidget {
         alignment: Alignment(0.0, 0.0),
         padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 3.0),
         child: Text(
-          "Register for C classes",
+          text,
           style: TextStyle(fontSize: ConatusFonts.small),
         ),
       ),
