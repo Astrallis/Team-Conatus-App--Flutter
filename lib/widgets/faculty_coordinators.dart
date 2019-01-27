@@ -19,7 +19,7 @@ class FacultyCoordinators extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
       child: ListView(
         scrollDirection: Axis.vertical,
-        children: List.generate(4, (index) {
+        children: List.generate(faculty.length, (index) {
           return Container(
             height: ConatusUtils.getCardRadius(deviceWidth) * 2,
             child: Card(

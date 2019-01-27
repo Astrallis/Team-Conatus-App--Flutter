@@ -20,6 +20,7 @@ abstract class RouterConstants {
     gallery: (context) => GalleryPage(),
     coordinator: (context) => CoordinatorPage(),
     registration: (context) => CRegistrationPage(),
+    events: (context) => EventsPage()
   };
 }
 
@@ -48,5 +49,5 @@ abstract class ConatusColors {
   static const int transparent = 0xFF00000000;
   static const int lightTransparent = 0xFF30000000;
   static const int darkTransparent = 0xFF99000000;
-  static const int bgc = 0xFF505050 ;
+  static const int silver = 0xFFC0C0C0;
 }

@@ -24,7 +24,7 @@ class EventData {
         name: "\"C\" – CLASSES FOR 1st Year STUDENTS",
         imageUrl:
             "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/c-class.jpg?alt=media&token=e9d3d0cf-a534-4620-8420-144e6bad8167",
-        description: "")
+        description: "Team CONATUS conducted the C Classes for the 1st Year students of our college. The classes were taken in the CSE labs from 4:00 PM to 6:00 PM on every working Monday, Tuesday, Wednesday and Thursday starting from 29th January 2018 till 5th March 2018. The mentors were the 3rd Year students of team CONATUS.")
   ];
 
   static get eventsData => List.of(_events);
