@@ -43,7 +43,7 @@ class IntroPageItem extends StatelessWidget {
           color: Colors.white70,
           fontWeight: FontWeight.bold,
           letterSpacing: 2.0,
-          fontSize: 14.0,
+          fontSize: 20.0,
         ),
         textAlign: TextAlign.center,
       ),
@@ -65,11 +65,14 @@ class IntroPageItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var image = CachedNetworkImage(
-      imageUrl:item.imageUrl,
+      imageUrl: item.imageUrl,
       fit: BoxFit.cover,
       alignment: FractionalOffset(
         0.5 + (pageVisibility.pagePosition / 3),
         0.5,
+      ),
+      placeholder: Center(
+        child: Text("Loading Image..."),
       ),
     );
 
