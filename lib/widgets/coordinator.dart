@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import '../utils/constants.dart';
+import '../models/coordinator.dart' as C;
+import '../data/coordinators_data.dart';
 import './tagline.dart';
 
 class Coordinator extends StatelessWidget {
-  _launchURL() async {
+  _launchURL(String url) async {
     try {
-      const url = 'https://github.com/naimishverma17';
       if (await canLaunch(url)) {
         await launch(url, forceWebView: true, forceSafariVC: true);
       } else {
@@ -20,6 +22,7 @@ class Coordinator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    C.Coordinator _coordinator = CoordinatorsData.selectedCoordinator;
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -32,15 +35,19 @@ class Coordinator extends StatelessWidget {
           SizedBox(
             height: Dimensions.gap * 6,
           ),
-          CircleAvatar(
-            radius: Dimensions.avatarRadius,
-            backgroundImage: AssetImage("assets/images/avatar.jpeg"),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(Dimensions.avatarRadius*1.5),
+            child: CachedNetworkImage(
+              imageUrl: _coordinator.imageUrl,
+              width: Dimensions.avatarRadius * 2.3,
+              height: Dimensions.avatarRadius * 2.3,
+            ),
           ),
           SizedBox(
             height: Dimensions.gap * 3,
           ),
           Text(
-            "Naimish verma",
+            _coordinator.name,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: ConatusFonts.large),
           ),
@@ -52,7 +59,7 @@ class Coordinator extends StatelessWidget {
           ),
           SizedBox(height: Dimensions.gap * 2),
           Text(
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolor vero tenetur saepe voluptatum temporibus totam cupiditate quae amet Sit veniam pariatur saepe ipsam ad numquam dignissimos sint architecto in Lorem ipsum dolor sit amet consectetur, Sed dolor vero tenetur saepe voluptatum tempo ribadipisicing m dolor sit amet consectetur, adipisicing elit.",
+            _coordinator.description,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: ConatusFonts.extraSmall),
           ),
@@ -62,7 +69,7 @@ class Coordinator extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 onTap: () {
-                  _launchURL();
+                  _launchURL(_coordinator.facebookUrl);
                 },
                 child: Image.asset(
                   "assets/images/facebook.png",
@@ -71,24 +78,39 @@ class Coordinator extends StatelessWidget {
                 ),
               ),
               SizedBox(width: Dimensions.gap * 2),
-              Image.asset(
-                "assets/images/instagram.png",
-                width: Dimensions.iconsWidth,
-                height: Dimensions.iconsHeight,
+              GestureDetector(
+                onTap: () {
+                  _launchURL(_coordinator.instagramUrl);
+                },
+                child: Image.asset(
+                  "assets/images/instagram.png",
+                  width: Dimensions.iconsWidth,
+                  height: Dimensions.iconsHeight,
+                ),
               ),
               SizedBox(
                 width: Dimensions.gap * 2,
               ),
-              Image.asset(
-                "assets/images/linkedin.png",
-                width: Dimensions.iconsWidth,
-                height: Dimensions.iconsHeight,
+              GestureDetector(
+                onTap: () {
+                  _launchURL(_coordinator.linkedinUrl);
+                },
+                child: Image.asset(
+                  "assets/images/linkedin.png",
+                  width: Dimensions.iconsWidth,
+                  height: Dimensions.iconsHeight,
+                ),
               ),
               SizedBox(width: Dimensions.gap * 2),
-              Image.asset(
-                "assets/images/github.png",
-                width: Dimensions.iconsWidth,
-                height: Dimensions.iconsHeight,
+              GestureDetector(
+                onTap: () {
+                  _launchURL(_coordinator.githubUrl);
+                },
+                child: Image.asset(
+                  "assets/images/github.png",
+                  width: Dimensions.iconsWidth,
+                  height: Dimensions.iconsHeight,
+                ),
               )
             ],
           ),

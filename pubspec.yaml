@@ -27,6 +27,7 @@ dependencies:
   dson: ^0.15.3
   progress_indicators: ^0.1.2
   splashscreen: ^1.2.0
+  rxdart: ^0.20.0
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +76,7 @@ flutter:
     - assets/images/conatua-text.png
     - assets/images/register-bg.jpeg
     - assets/images/gallery-bg.png
+    - assets/images/c-bg.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
