@@ -15,7 +15,7 @@ abstract class RouterConstants {
   // final not const because it receive the context dynamically
   // route mapping
   static final Map<String, WidgetBuilder> routerMapping = {
-    splaash: (context) => SplashScreen(),
+    splaash: (context) => SplaashScreen(),
     home: (context) => HomePage(),
     student_coordinators: (context) => StudentCoordinatorsPage(),
     faculty_coordinators: (context) => FacultyCoordinatorsPage(),

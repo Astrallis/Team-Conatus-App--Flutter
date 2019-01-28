@@ -1,36 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:scoped_model/scoped_model.dart';
+import 'package:splashscreen/splashscreen.dart';
 
-import '../data/scoped_model/root.dart';
+import '../pages/home_page.dart';
+import '../utils/connection.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplaashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final double _height = MediaQuery.of(context).size.height;
-    final double _width = MediaQuery.of(context).size.width;
-    return ScopedModel<RootModel>(
-      model: RootModel(),
-      child: Scaffold(
-        body: Container(
-          width: _width,
-          height: _height,
-          decoration: BoxDecoration(color: Colors.black),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Image.asset("assets/images/logo-gif.gif"),
-              ScopedModelDescendant<RootModel>(
-                builder: (context, child, model) {
-                  model.fetchCoordinators();
-                  return SizedBox();
-                },
-              )
-            ],
-          ),
-        ),
-      ),
+    Connection.setUpConnectionListener();
+    return Scaffold(
+      body: SplashScreen(
+          seconds: 6,
+          navigateAfterSeconds:HomePage(),
+//          image: new Image.asset("assets/images/logo-gif.gif",width:600.0,),
+          imageBackground: AssetImage("assets/images/logo-gif.gif"),
+          backgroundColor: Colors.black,
+          styleTextUnderTheLoader: new TextStyle(),
+          photoSize: 80.0,
+          loaderColor: Colors.black),
     );
   }
 }

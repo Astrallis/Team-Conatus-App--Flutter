@@ -12,13 +12,18 @@ class Connection {
   }
 
   static setUpConnectionListener() {
+    int _count = 0;
     const errorMessage = "No internet connection...";
-    const successMessage = "No internet connection...";
+    const successMessage = "Connected...";
     Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
       if (result == ConnectivityResult.none) {
         Toast.showToast(message: errorMessage);
+        _count++;
       } else {
-        Toast.showToast(message: successMessage);
+        if (_count > 0) {
+          Toast.showToast(message: successMessage);
+        }
+        _count++;
       }
     });
   }

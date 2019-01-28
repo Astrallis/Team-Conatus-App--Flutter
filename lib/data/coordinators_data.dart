@@ -1,11 +1,10 @@
-import 'package:scoped_model/scoped_model.dart';
 import 'dart:convert';
-import '../../utils/auth_service.dart';
-import '../../models/coordinator.dart';
-import '../../utils/conatus_enums.dart';
-import '../../utils/conatus_utils.dart';
+import '../utils/auth_service.dart';
+import '../models/coordinator.dart';
+import '../utils/conatus_enums.dart';
+import '../utils/conatus_utils.dart';
 
-class CoordinatorsData extends Model {
+class CoordinatorsData {
   static const String _API_URL = "https://conatusinfo-8341f.firebaseio.com";
   ConatusAuth auth = ConatusAuth.instance;
 
@@ -13,7 +12,7 @@ class CoordinatorsData extends Model {
 
   List<Coordinator> get coordinators => _coordinators;
 
-  String fetchCoordinators() {
+   fetchCoordinators() {
     this.auth.get(url: '${_API_URL}/coordinator.json').then((response) {
       if (response.statusCode == 404) {
         print("Error" + response.body);
