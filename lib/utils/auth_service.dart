@@ -17,10 +17,10 @@ class ConatusAuth {
 
   Future post({@required url, body}) {
     Map<String,String> headers ={
-      "content-type":"application/x-www-form-urlencoded"
+      "content-type":"application/json"
     };
 
-    return http.post(url,headers: headers, body: body).catchError(_handleError);
+    return http.post(url, body: body).catchError(_handleError);
   }
   Future put({@required url, body}) {
     return http.post(url, body: body).catchError(_handleError);

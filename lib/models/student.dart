@@ -1,18 +1,32 @@
-import 'package:meta/meta.dart';
 
+import 'package:meta/meta.dart';
+import 'package:dson/dson.dart';
+
+@serializable
 class Student {
+  @SerializedName("name")
   String name;
+
+  @SerializedName("email")
   String email;
-  String student_no;
-  String roll_number;
-  String contact_number;
+
+  @SerializedName("student_number")
+  String studentNumber;
+
+  @SerializedName("roll_number")
+  String rollNumber;
+
+  @SerializedName("contact_number")
+  String contactNumber;
+
+  @SerializedName("branch")
   String branch;
 
   Student(
       {@required this.name,
       @required this.email,
-      @required this.student_no,
-      @required this.roll_number,
-      @required this.contact_number,
+      @required this.studentNumber,
+      @required this.rollNumber,
+      @required this.contactNumber,
       @required this.branch});
 }
