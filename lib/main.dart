@@ -15,7 +15,7 @@ void main() {
               brightness: Brightness.dark,
               primaryColor: Color(ConatusColors.colorPrimary),
               accentColor: Color(ConatusColors.colorAccent)),
-          initialRoute: RouterConstants.home,
+          initialRoute: RouterConstants.splaash,
           routes: RouterConstants.routerMapping,
         )));
   });

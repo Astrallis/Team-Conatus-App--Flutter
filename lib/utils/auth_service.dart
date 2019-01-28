@@ -11,8 +11,7 @@ class ConatusAuth {
   static ConatusAuth get instance => _authSingleton;
 
   Future get({@required url, data = ""}) {
-    Map<String, String> options = {"params": data};
-    return http.get(url, headers: options).catchError(_handleError);
+    return http.get(url).catchError(_handleError);
   }
 
   Future post({@required url, body}) {

@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import '../page_exports.dart';
 
 abstract class RouterConstants {
-  static const String home = "/";
+  static const String splaash = "/";
+  static const String home = "/home";
   static const String gallery = "/gallery";
   static const String faculty_coordinators = "/faculty-coordinators";
   static const String student_coordinators = "/student-coordinators";
@@ -14,6 +15,7 @@ abstract class RouterConstants {
   // final not const because it receive the context dynamically
   // route mapping
   static final Map<String, WidgetBuilder> routerMapping = {
+    splaash: (context) => SplashScreen(),
     home: (context) => HomePage(),
     student_coordinators: (context) => StudentCoordinatorsPage(),
     faculty_coordinators: (context) => FacultyCoordinatorsPage(),

@@ -55,6 +55,8 @@ flutter:
     - assets/images/gallery.png
     - assets/images/student.png
     - assets/images/conatus.png
+    - assets/images/conatus-red.png
+    - assets/images/logo-gif.gif
     - assets/images/menu.png
     - assets/images/back.png
     - assets/images/linkedin.png
