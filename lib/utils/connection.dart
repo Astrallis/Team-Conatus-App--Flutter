@@ -1,4 +1,5 @@
 import 'package:connectivity/connectivity.dart';
+import './toast.dart';
 
 class Connection {
   static getConnectionStatus() async {
@@ -11,9 +12,13 @@ class Connection {
   }
 
   static setUpConnectionListener() {
+    const errorMessage = "No internet connection...";
+    const successMessage = "No internet connection...";
     Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
       if (result == ConnectivityResult.none) {
-        return false;
+        Toast.showToast(message: errorMessage);
+      } else {
+        Toast.showToast(message: successMessage);
       }
     });
   }
