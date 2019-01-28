@@ -71,6 +71,10 @@ flutter:
     - assets/images/sunita-mam.jpg
     - assets/images/conatua-text.png
     - assets/images/register-bg.jpeg
+    - assets/images/contactus.png
+    - assets/images/m1.png
+    - assets/images/fb.png
+    - assets/images/insta.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

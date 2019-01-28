@@ -7,9 +7,9 @@ abstract class RouterConstants {
   static const String faculty_coordinators = "/faculty-coordinators";
   static const String student_coordinators = "/student-coordinators";
   static const String events = "/events";
-  static const String contact_us = "/contact-us";
   static const String coordinator = "/coordinator";
   static const String registration = "/registration";
+  static const String contact = "/contact";
 
   // final not const because it receive the context dynamically
   // route mapping
@@ -20,6 +20,7 @@ abstract class RouterConstants {
     gallery: (context) => GalleryPage(),
     coordinator: (context) => CoordinatorPage(),
     registration: (context) => CRegistrationPage(),
+    contact: (context) => ContactPage(),
   };
 }
 
@@ -48,4 +49,5 @@ abstract class ConatusColors {
   static const int transparent = 0xFF00000000;
   static const int lightTransparent = 0xFF30000000;
   static const int bgc = 0xFF505050 ;
+  static const int darkTransparent = 0xBB000000;
 }
