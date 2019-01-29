@@ -14,7 +14,7 @@ class DevPage extends ContainerPage {
 
   @override
   Widget getContentWidget() {
-    return Dev();
+    return Devs();
   }
 
   @override

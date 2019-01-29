@@ -48,6 +48,7 @@ flutter:
     - assets/images/drawer-background.png
     - assets/images/contact.png
     - assets/images/home.png
+    - assets/images/code.png
     - assets/images/event.png
     - assets/images/faculty.png
     - assets/images/gallery.png

@@ -97,7 +97,7 @@ class ConatusDrawer extends StatelessWidget {
             _getContainer(),
             ListTile(
               leading: Image.asset(
-                "assets/images/contact.png",
+                "assets/images/code.png",
                 width: _ICON_SIZE,
                 height: _ICON_SIZE,
               ),
