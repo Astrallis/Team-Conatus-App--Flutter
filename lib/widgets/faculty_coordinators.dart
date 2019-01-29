@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 import '../utils/constants.dart';
 import '../utils/conatus_utils.dart';
@@ -30,18 +31,20 @@ class FacultyCoordinators extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    height: Dimensions.avatarRadius*2,
-                    width: Dimensions.avatarRadius*2,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(faculty[index].profileUrl),
-                        fit: BoxFit.fill
-                      ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.avatarRadius),
-                      ),
-                    ),
+                  ClipRRect(
+                    borderRadius:
+                        BorderRadius.circular(Dimensions.avatarRadius * 1.5),
+                    child: CachedNetworkImage(
+                        fit: BoxFit.fill,
+                        imageUrl: faculty[index].profileUrl,
+                        width: Dimensions.avatarRadius * 2.3,
+                        height: Dimensions.avatarRadius * 2.3,
+                        placeholder: Center(
+                          child: Text(
+                            "Loading Image...",
+                            style: TextStyle(fontSize: ConatusFonts.least),
+                          ),
+                        )),
                   ),
                   SizedBox(height: Dimensions.gap * 2),
                   Center(

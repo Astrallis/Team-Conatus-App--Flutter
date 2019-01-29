@@ -65,7 +65,7 @@ class StudentState extends State {
                               Dimensions.avatarRadius * 0.80),
                           child: CachedNetworkImage(
                             placeholder: Center(
-                              child: Text("Loading Image...",style: TextStyle(fontSize: ConatusFonts.extraSmall),),
+                              child: Text("Loading Image...",style: TextStyle(fontSize: ConatusFonts.least),),
                             ),
                             imageUrl: _coordinator[index].imageUrl,
                             width: Dimensions.avatarRadius * 1.6,

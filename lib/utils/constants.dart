@@ -45,6 +45,7 @@ abstract class ConatusFonts {
   static const double medium = 20.0;
   static const double small = 17.0;
   static const double extraSmall = 15.0;
+  static const double least = 13.0;
 }
 
 abstract class ConatusColors {

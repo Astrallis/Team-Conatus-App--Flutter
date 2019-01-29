@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+
 import '../models/dev.dart';
 import '../data/dev_data.dart';
 import '../utils/constants.dart';
@@ -31,18 +33,20 @@ class Devs extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    height: Dimensions.avatarRadius*2.5,
-                    width: Dimensions.avatarRadius*2.5,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(devs[index].imageUrl),
-                          fit: BoxFit.cover
-                      ),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(Dimensions.avatarRadius*1.5),
-                      ),
-                    ),
+                  ClipRRect(
+                    borderRadius:
+                    BorderRadius.circular(Dimensions.avatarRadius * 1.5),
+                    child: CachedNetworkImage(
+                        fit: BoxFit.cover,
+                        imageUrl: devs[index].imageUrl,
+                        width: Dimensions.avatarRadius * 2.5,
+                        height: Dimensions.avatarRadius * 2.5,
+                        placeholder: Center(
+                          child: Text(
+                            "Loading Image...",
+                            style: TextStyle(fontSize: ConatusFonts.least),
+                          ),
+                        )),
                   ),
                   SizedBox(height: Dimensions.gap * 2),
                   Center(
