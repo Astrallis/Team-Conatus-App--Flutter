@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:dson/dson.dart';
 import 'package:progress_indicators/progress_indicators.dart';
 
 import './conatus_button.dart';

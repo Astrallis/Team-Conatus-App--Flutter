@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import '../utils/constants.dart';
+import '../utils/conatus_enums.dart';
 import '../models/coordinator.dart' as C;
 import '../data/coordinators_data.dart';
 import './tagline.dart';
 
 class Coordinator extends StatelessWidget {
-  _launchURL(String url) async {
-    try {
-      if (await canLaunch(url)) {
-        await launch(url, forceWebView: true, forceSafariVC: true);
-      } else {
-        throw 'Could not launch $url';
-      }
-    } catch (Ex) {
-      print(Ex);
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     C.Coordinator _coordinator = CoordinatorsData.selectedCoordinator;
+    String year;
+    if (_coordinator.year == Year.second) {
+      year = "2nd";
+    } else if (_coordinator.year == Year.third) {
+      year = "3rd";
+    } else {
+      year = "4th";
+    }
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
+      padding: EdgeInsets.only(left: 10.0, right: 10.0),
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage("assets/images/lts.png"), fit: BoxFit.cover),
@@ -36,7 +33,7 @@ class Coordinator extends StatelessWidget {
             height: Dimensions.gap * 6,
           ),
           ClipRRect(
-            borderRadius: BorderRadius.circular(Dimensions.avatarRadius*1.5),
+            borderRadius: BorderRadius.circular(Dimensions.avatarRadius * 1.5),
             child: CachedNetworkImage(
               imageUrl: _coordinator.imageUrl,
               width: Dimensions.avatarRadius * 2.3,
@@ -53,7 +50,7 @@ class Coordinator extends StatelessWidget {
           ),
           SizedBox(height: Dimensions.gap),
           Text(
-            "Coordinator 3rd Year",
+            """Coordinator ${year} Year""",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: ConatusFonts.small),
           ),
@@ -67,50 +64,11 @@ class Coordinator extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  _launchURL(_coordinator.facebookUrl);
-                },
-                child: Image.asset(
-                  "assets/images/facebook.png",
-                  width: Dimensions.iconsWidth,
-                  height: Dimensions.iconsHeight,
-                ),
-              ),
-              SizedBox(width: Dimensions.gap * 2),
-              GestureDetector(
-                onTap: () {
-                  _launchURL(_coordinator.instagramUrl);
-                },
-                child: Image.asset(
-                  "assets/images/instagram.png",
-                  width: Dimensions.iconsWidth,
-                  height: Dimensions.iconsHeight,
-                ),
-              ),
-              SizedBox(
-                width: Dimensions.gap * 2,
-              ),
-              GestureDetector(
-                onTap: () {
-                  _launchURL(_coordinator.linkedinUrl);
-                },
-                child: Image.asset(
-                  "assets/images/linkedin.png",
-                  width: Dimensions.iconsWidth,
-                  height: Dimensions.iconsHeight,
-                ),
-              ),
-              SizedBox(width: Dimensions.gap * 2),
-              GestureDetector(
-                onTap: () {
-                  _launchURL(_coordinator.githubUrl);
-                },
-                child: Image.asset(
-                  "assets/images/github.png",
-                  width: Dimensions.iconsWidth,
-                  height: Dimensions.iconsHeight,
-                ),
+              Image.asset("assets/images/email.png"),
+              SizedBox(width: Dimensions.gap),
+              Text(
+                _coordinator.email,
+                style: TextStyle(fontSize: ConatusFonts.extraSmall),
               )
             ],
           ),
