@@ -4,6 +4,7 @@ import '../utils/constants.dart';
 
 class ConatusDrawer extends StatelessWidget {
   static const double _ICON_SIZE = 22.0;
+
   Widget build(BuildContext context) {
     return Drawer(
       elevation: 20.0,
@@ -91,6 +92,18 @@ class ConatusDrawer extends StatelessWidget {
               title: Text("Contact Us", style: _getTextStyle()),
               onTap: () {
                 _navigate(context, RouterConstants.contact_us);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset(
+                "assets/images/contact.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
+              title: Text("Development Team", style: _getTextStyle()),
+              onTap: () {
+                _navigate(context, RouterConstants.dev);
               },
             ),
             _getContainer(),
