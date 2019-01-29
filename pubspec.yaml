@@ -58,6 +58,7 @@ flutter:
     - assets/images/menu.png
     - assets/images/back.png
     - assets/images/email.png
+    - assets/images/dev-bg.jpg
     - assets/images/avatar.jpeg
     - assets/images/college.png
     - assets/images/lts.png
