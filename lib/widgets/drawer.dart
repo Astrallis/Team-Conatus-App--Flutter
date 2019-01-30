@@ -91,7 +91,7 @@ class ConatusDrawer extends StatelessWidget {
               ),
               title: Text("Contact Us", style: _getTextStyle()),
               onTap: () {
-                _navigate(context, RouterConstants.contact_us);
+                _navigate(context, RouterConstants.contact);
               },
             ),
             _getContainer(),

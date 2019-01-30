@@ -7,3 +7,4 @@ export './pages/coordinator_page.dart';
 export './pages/events_page.dart';
 export './pages/splaash.dart';
 export './pages/dev_page.dart';
+export './pages/contact.dart';
