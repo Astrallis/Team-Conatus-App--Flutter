@@ -9,14 +9,15 @@ class SplaashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Connection.setUpConnectionListener();
-    return Scaffold(backgroundColor: Colors.black,
+    return Scaffold(
+      backgroundColor: Colors.black,
       body: Container(
-        margin: EdgeInsets.fromLTRB(60,210,0,0),
-        height: 300,width: 300,
+        margin: EdgeInsets.fromLTRB(60, 210, 0, 0),
+        height: 300,
+        width: 300,
         child: SplashScreen(
-
             seconds: 6,
-            navigateAfterSeconds:HomePage(),
+            navigateAfterSeconds: HomePage(),
 //          image: new Image.asset("assets/images/logo-gif.gif",width:600.0,),
             imageBackground: AssetImage("assets/images/logo-gif.gif"),
             backgroundColor: Colors.black,
