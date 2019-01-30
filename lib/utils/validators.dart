@@ -9,30 +9,45 @@ class Validators {
       return null;
   }
 
-  static String validateStudentNumber(String stdNo){
-    if(stdNo.isEmpty || (stdNo != null && stdNo.length <7)) {
+  static String validateStudentNumber(String stdNo) {
+    if (stdNo.isEmpty || (stdNo != null && stdNo.length != 7)) {
       return "Enter a valid student number";
     }
     return null;
   }
 
-  static String validatePhno(String phno){
-    if(phno.isEmpty || (phno != null && phno.length <10)) {
+  static String validatePhno(String phno) {
+    if (phno.isEmpty || (phno != null && phno.length != 10)) {
       return "Enter a valid phone number";
     }
     return null;
   }
-  static String validateRollno(String rollno){
-    if(rollno.isEmpty || (rollno != null && rollno.length <10)) {
+
+  static String validateRollno(String rollno) {
+    if (rollno.isEmpty || (rollno != null && rollno.length != 10)) {
       return "Enter a valid roll number";
     }
     return null;
   }
 
   static String validateNotNull(String value) {
-    if(value.isEmpty) {
+    if (value.isEmpty) {
       return "Field cannot be empty";
     }
     return null;
+  }
+
+  static String validateBranch(String value) {
+    if (value.isEmpty || _isNumeric(value)) {
+      return "Enter a valid branch";
+    }
+    return null;
+  }
+
+  static  bool _isNumeric(String str) {
+    if(str == null) {
+      return false;
+    }
+    return double.tryParse(str) != null;
   }
 }

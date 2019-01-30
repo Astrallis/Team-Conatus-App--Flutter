@@ -106,7 +106,6 @@ class ConatusDrawer extends StatelessWidget {
                 _navigate(context, RouterConstants.dev);
               },
             ),
-            _getContainer(),
           ],
         ),
       ),

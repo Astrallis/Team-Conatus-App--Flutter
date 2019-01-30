@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_indicators/progress_indicators.dart';
+import 'dart:convert';
 
 import './conatus_button.dart';
 import './dialog.dart';
@@ -58,7 +59,7 @@ class RegistrationFormState extends State {
             TextFormField(
               keyboardType: TextInputType.text,
               decoration: InputDecoration(hintText: "Branch"),
-              validator: Validators.validateNotNull,
+              validator: Validators.validateBranch,
               onSaved: (branch) {
                 this._branch = branch;
               },
@@ -154,23 +155,33 @@ class RegistrationFormState extends State {
       }).then((res) {
         setState(() {
           _isLoading = false;
-          _formKey.currentState.reset();
-          Map response = Map.from(res.body);
-          if(response["data"] !=null){
-            _message = "You are registered successfully!!";
+          Map response = json.decode(res.body);
+          if (response["data"] != null) {
+            _message =
+                "You are registered successfully, please check your email!!";
+            _formKey.currentState.reset();
+          } else if (response["status_code"] != null) {
+            if (response["errors"]["email"] != null) {
+              _message = "This email already exists!!";
+            }
+            if (response["errors"]["student_number"] != null) {
+              _message = "This student number already exists!!";
+            }
+            if (response["errors"]["roll_number"] != null) {
+              _message = "This roll number already exists!!";
+            }
           }
-          print("Response"+res.body.toString());
+          print("Response" + res.body.toString());
           showDialog(
             context: _context,
             barrierDismissible: false,
             builder: (BuildContext context) => CDialog(
-              message: _message,
-            ),
+                  message: _message,
+                ),
           );
         });
       });
       print('Printing the login data.');
-
     }
   }
 }

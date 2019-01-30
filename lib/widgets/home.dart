@@ -20,8 +20,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   initState() {
     super.initState();
     _animationController = AnimationController(
-        duration: const Duration(milliseconds: 3500), vsync: this);
-    _animation = Tween(begin: 250.0, end: 300.0).animate(_animationController)
+        duration: const Duration(milliseconds: 4200), vsync: this);
+    _animation = Tween(begin: 250.0, end: 380.0).animate(_animationController)
       ..addListener(() {
         setState(() {});
       });
@@ -69,6 +69,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ConatusButton(text: _BUTTON_TEXT, onClick: _onClick),
               SizedBox(
                 height: Dimensions.gap * 3,
+              ),
+              Text(
+                "About Us",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: ConatusFonts.medium),
+              ),
+              SizedBox(
+                height: Dimensions.gap * 2,
               ),
               Text(
                 _ABOUT,

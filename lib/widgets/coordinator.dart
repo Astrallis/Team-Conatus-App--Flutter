@@ -64,7 +64,11 @@ class Coordinator extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset("assets/images/email.png"),
+              Image.asset(
+                "assets/images/email.png",
+                width: 22.0,
+                height: 22.0,
+              ),
               SizedBox(width: Dimensions.gap),
               Text(
                 _coordinator.email,
