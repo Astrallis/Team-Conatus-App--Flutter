@@ -13,7 +13,8 @@ class Contact extends StatelessWidget {
               image: AssetImage("assets/images/home-bg.png"),
               fit: BoxFit.cover),
         ),
-        child: new Column(
+        child: new SingleChildScrollView(
+          child: new Column(
           children: [
             Container(
               margin: EdgeInsets.fromLTRB(100, 80, 100, 0),
@@ -66,27 +67,49 @@ class Contact extends StatelessWidget {
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  child: Image.asset(
-                    "assets/images/fb.png",
-                    scale: 6,
-                  ),
-                  padding: EdgeInsets.fromLTRB(1, 15, 0, 15),
+
+
+
+                Container(
+                  child: new Row(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      child: Image.asset(
+                        "assets/images/fb.png",
+                        scale: 10,
+                      ),                  padding: EdgeInsets.fromLTRB(0, 5, 0, 15),
+                    ),
+                    Padding(
+                      child: Text(
+                        "www.facebook.com/conatus.akg",
+                        style: TextStyle(fontSize: ConatusFonts.medium),
+                      ),                  padding: EdgeInsets.fromLTRB(5, 5, 0, 15),
+                    ),
+
+                  ],),
                 ),
-                Padding(
-                  child: Image.asset(
-                    "assets/images/insta.png",
-                    scale: 6,
+            Container(
+              child: new Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    child: Image.asset(
+                      "assets/images/insta.png",
+                      scale: 12,
+                    ),                  padding: EdgeInsets.fromLTRB(0, 2, 0, 15),
                   ),
-                  padding: EdgeInsets.fromLTRB(7, 15, 0, 15),
-                ),
-              ],
-            )
+                  Padding(
+                    child: Text(
+                      "www.instagram.com/conatus.akg",
+                      style: TextStyle(fontSize: ConatusFonts.medium),
+                    ),                  padding: EdgeInsets.fromLTRB(5, 2, 0, 15),
+                  ),
+
+                ],),
+            ),
+
           ],
         ),
+      ),
       ),
     );
   }
