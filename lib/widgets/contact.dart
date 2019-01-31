@@ -19,7 +19,7 @@ class Contact extends StatelessWidget {
               Container(
                 margin: EdgeInsets.fromLTRB(100, 80, 100, 0),
                 child: Image.asset(
-                  "assets/images/contactus.png",
+                  "assets/images/icon.png",
                   height: 200,
                   width: 200,
                 ),

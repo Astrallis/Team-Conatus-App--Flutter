@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:conatus_app/utils/page_transformer/page_transformer.dart';
+import '../../utils/page_transformer/page_transformer.dart';
 import '../../models/gallery.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 

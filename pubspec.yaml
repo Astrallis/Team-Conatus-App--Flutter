@@ -33,8 +33,8 @@ dev_dependencies:
 
 flutter_icons:
   android: "launcher_icon"
-  ios: true
-  image_path: "assets/icon/icon.png"
+  ios: true,
+  image_path: "assets/images/icon.png"
 
 
 
@@ -73,7 +73,6 @@ flutter:
     - assets/images/register-bg.jpeg
     - assets/images/gallery-bg.png
     - assets/images/c-bg.jpeg
-    - assets/images/contactus.png
     - assets/images/m1.png
     - assets/images/fb.png
     - assets/images/insta.png

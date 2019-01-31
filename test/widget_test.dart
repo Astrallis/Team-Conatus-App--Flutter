@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:conatus_app/main.dart';
+import '../lib/main.dart';
 import '../lib/pages/home_page.dart';
 
 void main() {

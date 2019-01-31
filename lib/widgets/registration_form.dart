@@ -48,7 +48,7 @@ class RegistrationFormState extends State {
             TextFormField(
               keyboardType: TextInputType.text,
               decoration: InputDecoration(hintText: "Name"),
-              validator: Validators.validateNotNull,
+              validator: Validators.validateStringField,
               onSaved: (name) {
                 this._name = name;
               },
@@ -59,7 +59,7 @@ class RegistrationFormState extends State {
             TextFormField(
               keyboardType: TextInputType.text,
               decoration: InputDecoration(hintText: "Branch"),
-              validator: Validators.validateBranch,
+              validator: Validators.validateStringField,
               onSaved: (branch) {
                 this._branch = branch;
               },

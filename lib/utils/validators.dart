@@ -37,9 +37,9 @@ class Validators {
     return null;
   }
 
-  static String validateBranch(String value) {
+  static String validateStringField(String value) {
     if (value.isEmpty || _isNumeric(value)) {
-      return "Enter a valid branch";
+      return "This field is invalid";
     }
     return null;
   }
