@@ -79,6 +79,7 @@ flutter:
     - assets/images/insta.png
     - assets/images/team.jpg
     - assets/images/form.png
+    - assets/images/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
