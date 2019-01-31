@@ -144,7 +144,6 @@ class RegistrationFormState extends State {
         _isLoading = true;
       });
 
-//      String data = objectToSerializable(student);
       _auth.post(url: _API_URL, body: {
         "name": this._name,
         "email": this._email,
@@ -171,7 +170,6 @@ class RegistrationFormState extends State {
               _message = "This roll number already exists!!";
             }
           }
-          print("Response" + res.body.toString());
           showDialog(
             context: _context,
             barrierDismissible: false,
@@ -181,7 +179,6 @@ class RegistrationFormState extends State {
           );
         });
       });
-      print('Printing the login data.');
     }
   }
 }

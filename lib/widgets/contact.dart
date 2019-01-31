@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/constants.dart';
-import '../utils/conatus_utils.dart';
 
 class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
