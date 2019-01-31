@@ -1,5 +1,5 @@
-name: conatus_app
-description: A new Flutter project.
+name: Conatus
+description: Informative app for CS/IT sociey "Conatus" of AKGEC.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -27,8 +27,14 @@ dependencies:
   rxdart: 0.20.0
 
 dev_dependencies:
+  flutter_launcher_icons: "0.7.0"
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
 
 
 
@@ -71,6 +77,8 @@ flutter:
     - assets/images/m1.png
     - assets/images/fb.png
     - assets/images/insta.png
+    - assets/images/team.jpg
+    - assets/images/form.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
