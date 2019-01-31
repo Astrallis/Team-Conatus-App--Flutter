@@ -29,7 +29,7 @@ class RegistrationFormState extends State {
   String _branch;
   BuildContext _context;
   bool _isLoading = false;
-  String _radioValue;
+  String _address;
   ConatusAuth _auth = ConatusAuth.instance;
 
   @override
@@ -39,7 +39,7 @@ class RegistrationFormState extends State {
       margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Color(ConatusColors.darkTransparent),
+        color: Color(ConatusColors.ddarkTransparent),
         borderRadius: BorderRadius.all(Radius.circular(15.0)),
       ),
       child: Form(
@@ -58,10 +58,11 @@ class RegistrationFormState extends State {
             SizedBox(
               height: Dimensions.gap * 2,
             ),
-            TextFormField(
-              keyboardType: TextInputType.text,
+            DropdownButtonFormField(
+              items: getBranch(),
+              value: _branch,
+              validator: Validators.validateNotNull,
               decoration: InputDecoration(hintText: "Branch"),
-              validator: Validators.validateStringField,
               onSaved: (branch) {
                 this._branch = branch;
               },
@@ -69,31 +70,20 @@ class RegistrationFormState extends State {
             SizedBox(
               height: Dimensions.gap * 2,
             ),
-            Row(
-              children: <Widget>[
-                Radio(
-                  value: "hostler",
-                  groupValue: _radioValue,
-                  onChanged: _handleRadio,
-                ),
-                Text(
-                  "Hostler",
-                  style: TextStyle(fontSize: ConatusFonts.extraSmall),
-                )
-              ],
+            DropdownButtonFormField(
+              items: getAvailablity(),
+              value: _address,
+              validator: Validators.validateNotNull,
+              decoration: InputDecoration(hintText: "Hostler/Day Scholar"),
+              onSaved: (value) {
+                if (value == "Hostler")
+                  this._address = "hostler";
+                else
+                  this._address = "day_scholar";
+              },
             ),
-            Row(
-              children: <Widget>[
-                Radio(
-                  value: "day_scholar",
-                  groupValue: _radioValue,
-                  onChanged: _handleRadio,
-                ),
-                Text(
-                  "Day Scholar",
-                  style: TextStyle(fontSize: ConatusFonts.extraSmall),
-                )
-              ],
+            SizedBox(
+              height: Dimensions.gap * 2,
             ),
             TextFormField(
               keyboardType: TextInputType.number,
@@ -179,7 +169,7 @@ class RegistrationFormState extends State {
         "roll_number": this._rollno,
         "contact_number": this._phno,
         "branch": this._branch,
-        "is_hostler": this._radioValue
+        "is_hostler": this._address
       }).then((res) {
         setState(() {
           _isLoading = false;
@@ -188,7 +178,6 @@ class RegistrationFormState extends State {
             _message =
                 "You are registered successfully, please check your email!!";
             _formKey.currentState.reset();
-            _radioValue = null;
           } else if (response["status_code"] != null) {
             if (response["errors"]["email"] != null) {
               _message = "This email already exists!!";
@@ -212,8 +201,21 @@ class RegistrationFormState extends State {
     }
   }
 
-  void _handleRadio(String value) {
-    _radioValue = value;
+  List<DropdownMenuItem<String>> getBranch() {
+    return <String>["CSE", "IT", "ME", "EN", "EI", "CE", "EC"].map((value) {
+      return DropdownMenuItem(
+        value: value,
+        child: Text(value),
+      );
+    }).toList();
   }
 
+  List<DropdownMenuItem<String>> getAvailablity() {
+    return <String>["Hostler", "Day Scholar"].map((value) {
+      return DropdownMenuItem(
+        value: value,
+        child: Text(value),
+      );
+    }).toList();
+  }
 }
