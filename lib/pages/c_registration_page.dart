@@ -19,7 +19,7 @@ class CRegistrationPage extends ContainerPage {
 
   @override
   bool showDrawer(){
-    return false;
+    return true;
   }
 
   @override

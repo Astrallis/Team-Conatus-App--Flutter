@@ -37,6 +37,18 @@ class ConatusDrawer extends StatelessWidget {
             _getContainer(),
             ListTile(
               leading: Image.asset(
+                "assets/images/form.png",
+                width: _ICON_SIZE,
+                height: _ICON_SIZE,
+              ),
+              title: Text("C Classes Registration", style: _getTextStyle()),
+              onTap: () {
+                _navigate(context, RouterConstants.registration);
+              },
+            ),
+            _getContainer(),
+            ListTile(
+              leading: Image.asset(
                 "assets/images/event.png",
                 width: _ICON_SIZE,
                 height: _ICON_SIZE,

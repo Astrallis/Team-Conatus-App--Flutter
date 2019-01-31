@@ -20,7 +20,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   initState() {
     super.initState();
     _animationController = AnimationController(
-        duration: const Duration(milliseconds: 4200), vsync: this);
+        duration: const Duration(milliseconds: 4000), vsync: this);
     _animation = Tween(begin: 250.0, end: 380.0).animate(_animationController)
       ..addListener(() {
         setState(() {});
@@ -37,7 +37,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   Widget build(BuildContext context) {
     final double _height = MediaQuery.of(context).size.height;
-    final double _width = MediaQuery.of(context).size.width;
     return Container(
       height: _height,
       decoration: BoxDecoration(
@@ -66,7 +65,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               SizedBox(
                 height: Dimensions.gap * 3,
               ),
-              ConatusButton(text: _BUTTON_TEXT, onClick: _onClick),
+              Image.asset("assets/images/team.jpg"),
               SizedBox(
                 height: Dimensions.gap * 3,
               ),
@@ -88,9 +87,5 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
       ),
     );
-  }
-
-  void _onClick() {
-    Navigator.pushNamed(context, RouterConstants.registration);
   }
 }
