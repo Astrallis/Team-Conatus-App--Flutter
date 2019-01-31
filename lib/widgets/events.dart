@@ -56,7 +56,7 @@ class Events extends StatelessWidget {
                       Center(
                         child: Text(
                           _events[index].description,
-                          textAlign: TextAlign.center,
+                          textAlign: TextAlign.justify,
                           style: TextStyle(fontSize: ConatusFonts.extraSmall),
                         ),
                       ),

@@ -34,6 +34,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     });
     _animationController.forward();
   }
+  dispose(){
+    this._animationController.dispose();
+    super.dispose();
+  }
 
   Widget build(BuildContext context) {
     final double _height = MediaQuery.of(context).size.height;
@@ -79,7 +83,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
               Text(
                 _ABOUT,
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: ConatusFonts.small),
               )
             ],

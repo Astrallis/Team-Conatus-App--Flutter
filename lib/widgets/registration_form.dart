@@ -29,6 +29,7 @@ class RegistrationFormState extends State {
   String _branch;
   BuildContext _context;
   bool _isLoading = false;
+  String _radioValue;
   ConatusAuth _auth = ConatusAuth.instance;
 
   @override
@@ -44,6 +45,7 @@ class RegistrationFormState extends State {
       child: Form(
         key: _formKey,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             TextFormField(
               keyboardType: TextInputType.text,
@@ -66,6 +68,32 @@ class RegistrationFormState extends State {
             ),
             SizedBox(
               height: Dimensions.gap * 2,
+            ),
+            Row(
+              children: <Widget>[
+                Radio(
+                  value: "hostler",
+                  groupValue: _radioValue,
+                  onChanged: _handleRadio,
+                ),
+                Text(
+                  "Hostler",
+                  style: TextStyle(fontSize: ConatusFonts.extraSmall),
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Radio(
+                  value: "day_scholar",
+                  groupValue: _radioValue,
+                  onChanged: _handleRadio,
+                ),
+                Text(
+                  "Day Scholar",
+                  style: TextStyle(fontSize: ConatusFonts.extraSmall),
+                )
+              ],
             ),
             TextFormField(
               keyboardType: TextInputType.number,
@@ -113,7 +141,7 @@ class RegistrationFormState extends State {
             ),
             _isLoading
                 ? Center(
-                    child: FadingText('Loading...'),
+                    child: FadingText('Submitting...'),
                   )
                 : SizedBox(),
             SizedBox(
@@ -150,7 +178,8 @@ class RegistrationFormState extends State {
         "student_number": this._stdno,
         "roll_number": this._rollno,
         "contact_number": this._phno,
-        "branch": this._branch
+        "branch": this._branch,
+        "is_hostler": this._radioValue
       }).then((res) {
         setState(() {
           _isLoading = false;
@@ -159,6 +188,7 @@ class RegistrationFormState extends State {
             _message =
                 "You are registered successfully, please check your email!!";
             _formKey.currentState.reset();
+            _radioValue = null;
           } else if (response["status_code"] != null) {
             if (response["errors"]["email"] != null) {
               _message = "This email already exists!!";
@@ -181,4 +211,9 @@ class RegistrationFormState extends State {
       });
     }
   }
+
+  void _handleRadio(String value) {
+    _radioValue = value;
+  }
+
 }

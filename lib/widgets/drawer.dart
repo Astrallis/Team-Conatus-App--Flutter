@@ -145,6 +145,6 @@ class ConatusDrawer extends StatelessWidget {
       return;
     }
     Navigator.pop(context);
-    Navigator.pushNamed(context, route);
+    Navigator.pushReplacementNamed(context, route);
   }
 }

@@ -27,6 +27,7 @@ class StudentState extends State {
 
   dispose() {
     _subscription.cancel();
+    super.dispose();
   }
 
   Widget build(BuildContext context) {

@@ -35,13 +35,13 @@ class Contact extends StatelessWidget {
                       child: Text(
                         "Call us on:  7007799127 , 8751244551",
                         style: TextStyle(fontSize: ConatusFonts.small),
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.justify,
                       ),
                       padding: EdgeInsets.all(15.0),
                     ),
                     Padding(
                       child: Text(
-                        "Email: conatus.akgec2016@gmail.com",
+                        "Email: teamconatus@gmail.com",
                         style: TextStyle(fontSize: ConatusFonts.small),
                         textAlign: TextAlign.center,
                       ),
