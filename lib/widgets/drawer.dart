@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import '../utils/constants.dart';
+import '../pages/container_page.dart';
 
 class ConatusDrawer extends StatelessWidget {
   static const double _ICON_SIZE = 22.0;
@@ -144,6 +145,7 @@ class ConatusDrawer extends StatelessWidget {
     if (context == null || route == null) {
       return;
     }
+    ContainerPage.count = 0;
     Navigator.pop(context);
     Navigator.pushReplacementNamed(context, route);
   }

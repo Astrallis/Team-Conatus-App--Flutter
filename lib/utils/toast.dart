@@ -1,6 +1,7 @@
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import './constants.dart';
 
 class Toast {
   static showToast({@required String message}) {
@@ -8,7 +9,7 @@ class Toast {
         msg: message,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIos: 1,
-        backgroundColor: Colors.red,
+        backgroundColor: Color(ConatusColors.colorPrimary),
         textColor: Colors.white,
         fontSize: 16.0);
   }
