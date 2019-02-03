@@ -13,7 +13,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   static const String _ABOUT =
       """Leading the technical upfront, Conatus is the Computer Science and Information Technology society of Ajay Kumar Garg Engineering College. "Conatus" means "impulsive force" as it brings the students to the unexplored "technical horizon" within their grasp. Conatus stands on the objective of guiding the students towards the dawn of a better and successful tomorrow with its marvellous events, workshops, seminars and classes for the students of the college to thrive towards a brighter and a technically sound future.""";
-  static const String _BUTTON_TEXT = "Register for C classes";
   Animation _animation;
   AnimationController _animationController;
 

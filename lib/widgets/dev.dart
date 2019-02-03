@@ -28,19 +28,20 @@ class Devs extends StatelessWidget {
               elevation: 5.0,
               color: Color(ConatusColors.darkTransparent),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0)),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
               margin: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   ClipRRect(
                     borderRadius:
-                    BorderRadius.circular(Dimensions.avatarRadius * 1.5),
+                        BorderRadius.circular(Dimensions.avatarRadius),
                     child: CachedNetworkImage(
                         fit: BoxFit.cover,
                         imageUrl: devs[index].imageUrl,
-                        width: Dimensions.avatarRadius * 2.5,
-                        height: Dimensions.avatarRadius * 2.5,
+                        width: Dimensions.avatarRadius * 2,
+                        height: Dimensions.avatarRadius * 2,
                         placeholder: Center(
                           child: Text(
                             "Loading Image...",

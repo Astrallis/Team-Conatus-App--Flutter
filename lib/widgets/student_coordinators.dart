@@ -26,7 +26,9 @@ class StudentState extends State {
   }
 
   dispose() {
-    _subscription.cancel();
+    if (_subscription != null) {
+      _subscription.cancel();
+    }
     super.dispose();
   }
 
@@ -58,6 +60,10 @@ class StudentState extends State {
                   },
                   child: Card(
                     elevation: 5.0,
+                    color: Color(ConatusColors.darkTransparent),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -66,7 +72,10 @@ class StudentState extends State {
                               Dimensions.avatarRadius * 0.80),
                           child: CachedNetworkImage(
                             placeholder: Center(
-                              child: Text("Loading Image...",style: TextStyle(fontSize: ConatusFonts.least),),
+                              child: Text(
+                                "Loading Image...",
+                                style: TextStyle(fontSize: ConatusFonts.least),
+                              ),
                             ),
                             imageUrl: _coordinator[index].imageUrl,
                             width: Dimensions.avatarRadius * 1.6,
@@ -96,7 +105,7 @@ class StudentState extends State {
             style: TextStyle(fontSize: ConatusFonts.small),
           ),
           SizedBox(
-            height: Dimensions.gap*3,
+            height: Dimensions.gap * 3,
           ),
           Container(
             width: 200,

@@ -1,6 +1,8 @@
 package com.example.conatusapp;
 
 import android.os.Bundle;
+import android.widget.Toast;
+
 import io.flutter.app.FlutterActivity;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 

@@ -57,7 +57,7 @@ class Coordinator extends StatelessWidget {
           SizedBox(height: Dimensions.gap * 2),
           Text(
             _coordinator.description,
-            textAlign: TextAlign.justify,
+            textAlign: TextAlign.center,
             style: TextStyle(fontSize: ConatusFonts.extraSmall),
           ),
           SizedBox(height: Dimensions.gap * 3),

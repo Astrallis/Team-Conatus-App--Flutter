@@ -9,7 +9,7 @@ class ConatusAppBar extends StatelessWidget {
   final int appBarColor;
 
   ConatusAppBar(
-      {@required this.appBarTitle = "",
+      {this.appBarTitle = "",
       @required this.showDrawer,
       this.appBarColor = 0}) {}
 

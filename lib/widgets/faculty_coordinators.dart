@@ -24,7 +24,7 @@ class FacultyCoordinators extends StatelessWidget {
           return Container(
             height: ConatusUtils.getCardRadius(deviceWidth) * 2,
             child: Card(
-              color: Color(ConatusColors.lightTransparent),
+              color: Color(ConatusColors.darkTransparent),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0)),
               margin: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0),
