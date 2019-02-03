@@ -31,7 +31,7 @@ class Validators {
   }
 
   static String validateNotNull(String value) {
-    if (value.isEmpty) {
+    if (value == null) {
       return "Field cannot be empty";
     }
     return null;

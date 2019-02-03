@@ -62,6 +62,11 @@ class RegistrationFormState extends State {
               items: getBranch(),
               value: _branch,
               validator: Validators.validateNotNull,
+              onChanged: (String value) {
+                setState(() {
+                  this._branch = value;
+                });
+              },
               decoration: InputDecoration(hintText: "Branch"),
               onSaved: (branch) {
                 this._branch = branch;
@@ -73,6 +78,11 @@ class RegistrationFormState extends State {
             DropdownButtonFormField(
               items: getAvailablity(),
               value: _address,
+              onChanged: (String value) {
+                setState(() {
+                  this._address = value;
+                });
+              },
               validator: Validators.validateNotNull,
               decoration: InputDecoration(hintText: "Hostler/Day Scholar"),
               onSaved: (value) {
