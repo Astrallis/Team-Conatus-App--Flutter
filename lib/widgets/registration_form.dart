@@ -161,13 +161,13 @@ class RegistrationFormState extends State {
     String _message;
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save(); // Save our form now.
-      Student student = Student(
-          name: this._name,
-          email: this._email,
-          studentNumber: this._stdno,
-          rollNumber: this._rollno,
-          contactNumber: this._phno,
-          branch: this._branch);
+//      Student student = Student(
+//          name: this._name,
+//          email: this._email,
+//          studentNumber: this._stdno,
+//          rollNumber: this._rollno,
+//          contactNumber: this._phno,
+//          branch: this._branch);
       setState(() {
         _isLoading = true;
       });

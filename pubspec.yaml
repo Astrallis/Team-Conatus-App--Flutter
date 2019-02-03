@@ -25,6 +25,7 @@ dependencies:
   progress_indicators: 0.1.2
   splashscreen: 1.2.0
   rxdart: 0.20.0
+  flutter_crashlytics: 0.2.0
 
 dev_dependencies:
   flutter_test:

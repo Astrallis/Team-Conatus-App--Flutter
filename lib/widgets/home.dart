@@ -11,9 +11,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-  static const String _ABOUT =
-      """Leading the technical upfront, Conatus is the Computer Science and Information Technology society of Ajay Kumar Garg Engineering College. "Conatus" means "impulsive force" as it brings the students to the unexplored "technical horizon" within their grasp. Conatus stands on the objective of guiding the students towards the dawn of a better and successful tomorrow with its marvellous events, workshops, seminars and classes for the students of the college to thrive towards a brighter and a technically sound future.""";
-  Animation _animation;
+  static const String _ABOUT ="Conatus is the technical society of Computer Science and Information Technology in Ajay Kumar Garg Engineering College which brings to its students the illumination of the knowledge glow in IT sphere with its marvellous events, workshops and seminars. Founded on 10th October, 2005 Conatus’ functioning is firmly supported by HOD of CSE department, Dr. Sunita Yadav. In the last decade, Conatus has evolved as a technical base for its own members as well as the rest of the college. It has brought to the students the vast unexplored “technical horizon” within their grasp hold. Besides being the first technical society of AKGEC, Conatus leads the technological upfront by organising a wide range of activities throughout the year.";
+        Animation _animation;
   AnimationController _animationController;
 
   initState() {
