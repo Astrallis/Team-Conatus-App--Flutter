@@ -102,7 +102,7 @@ class IntroPageItem extends StatelessWidget {
           children: [
             image,
             imageOverlayGradient,
-            _buildTextContainer(context),
+//            _buildTextContainer(context),
           ],
         ),
       ),

@@ -34,11 +34,35 @@ class GalleryData {
     new Gallery(
         category: "Odyssey",
         imageUrl:
-            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2Fodyssey.jpg?alt=media&token=bd527986-065c-44af-b987-4f82dc2e9bfc"),
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2Fodyssey.jpg?alt=media&token=8d92d4cf-f8c2-4874-b36f-5f419b3b3096"),
     new Gallery(
-        category: "Event",
+        category: "Seniors",
         imageUrl:
-            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2Fparty.jpg?alt=media&token=a6743a80-7b02-4537-a05f-9c61d53aff9a"),
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F1.jpg?alt=media&token=9ab833f7-4224-438e-936b-2fc5f25399e3"),
+    new Gallery(
+        category: "Sunita Mam",
+        imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F2.jpg?alt=media&token=31fb6deb-87d8-4061-893d-dd75e123a532"),
+    new Gallery(
+        category: "Arjun Sir",
+        imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F3.jpg?alt=media&token=da54e6e1-7557-4b87-9232-88405e4d3117"),
+    new Gallery(
+        category: "Registration",
+        imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F4.jpg?alt=media&token=e9f7f0bc-f262-4c36-9679-2447421cc406"),
+    new Gallery(
+        category: "Code",
+        imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F5.jpg?alt=media&token=b7a93e67-cd3a-42b2-8d51-995027dde87c"),
+    new Gallery(
+        category: "Strike",
+        imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F6.jpg?alt=media&token=ccaacec2-fe72-4b04-8cff-f25288b12b0b"),
+    new Gallery(
+        category: "Faculty",
+        imageUrl:
+            "https://firebasestorage.googleapis.com/v0/b/conatus-app.appspot.com/o/Gallery%2F7.jpg?alt=media&token=cda41cb5-e46b-4878-b367-f037dead28fa")
   ];
 
   static get galleryData => List.of(_gallery);
