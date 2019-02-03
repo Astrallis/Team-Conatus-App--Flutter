@@ -30,7 +30,7 @@ abstract class RouterConstants {
 }
 
 abstract class Dimensions {
-  static const double appBarHeight = 70.0;
+  static const double appBarHeight = 62.0;
   static const double avatarRadius = 60.0;
   static const double gap = 10.0;
   static const double dotSize = 8.0;

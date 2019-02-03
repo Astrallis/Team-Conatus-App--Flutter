@@ -18,7 +18,7 @@ class ConatusButton extends StatelessWidget {
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Color(ConatusColors.colorPrimary),
-              blurRadius: 13.0,
+              blurRadius: 5.0,
             ),
           ],
           borderRadius: BorderRadius.all(
