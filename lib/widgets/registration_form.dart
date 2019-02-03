@@ -188,6 +188,8 @@ class RegistrationFormState extends State {
             _message =
                 "You are registered successfully, please check your email!!";
             _formKey.currentState.reset();
+            this._address = null;
+            this._branch = null;
           } else if (response["status_code"] != null) {
             if (response["errors"]["email"] != null) {
               _message = "This email already exists!!";

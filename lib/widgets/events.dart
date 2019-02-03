@@ -11,8 +11,9 @@ class Events extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
     return Container(
-      margin: EdgeInsets.only(top: Dimensions.appBarHeight),
+      margin: EdgeInsets.only(top: Dimensions.appBarHeight+statusbarHeight),
       decoration: BoxDecoration(
         color: Color(ConatusColors.silver),
       ),

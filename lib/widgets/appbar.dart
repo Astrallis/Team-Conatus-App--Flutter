@@ -15,8 +15,9 @@ class ConatusAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
     return Container(
-      height: Dimensions.appBarHeight,
+      height: Dimensions.appBarHeight + statusbarHeight,
       padding: EdgeInsets.only(top: 15.0),
       decoration: BoxDecoration(
           color: appBarColor == 0

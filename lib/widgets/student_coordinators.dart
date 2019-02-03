@@ -33,6 +33,7 @@ class StudentState extends State {
   }
 
   Widget build(BuildContext context) {
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
     if (_message == "Loading...")
       return Center(
         child: FadingText("Loading Coordinators..."),
@@ -45,7 +46,7 @@ class StudentState extends State {
           image: DecorationImage(
               image: AssetImage("assets/images/c-bg.jpeg"), fit: BoxFit.cover),
         ),
-        margin: EdgeInsets.only(top: Dimensions.appBarHeight),
+        margin: EdgeInsets.only(top: Dimensions.appBarHeight + statusbarHeight),
         padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
         child: GridView.count(
           crossAxisCount: 2,

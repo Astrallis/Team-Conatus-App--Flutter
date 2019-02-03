@@ -9,6 +9,7 @@ import '../data/faculty_data.dart';
 
 class FacultyCoordinators extends StatelessWidget {
   Widget build(BuildContext context) {
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
     final double deviceWidth = MediaQuery.of(context).size.width;
     final List<Faculty> faculty = FacultyData.facultiesData;
     return Container(
@@ -16,7 +17,7 @@ class FacultyCoordinators extends StatelessWidget {
         image: DecorationImage(
             image: AssetImage("assets/images/college.png"), fit: BoxFit.cover),
       ),
-      margin: EdgeInsets.only(top: Dimensions.appBarHeight),
+      margin: EdgeInsets.only(top: Dimensions.appBarHeight+statusbarHeight),
       padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
       child: ListView(
         scrollDirection: Axis.vertical,

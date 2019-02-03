@@ -8,11 +8,12 @@ class CRegistration extends StatelessWidget {
   Widget build(BuildContext context) {
     final double _width = MediaQuery.of(context).size.width;
     final double _height = MediaQuery.of(context).size.height;
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
 
     return Container(
       height: _height,
       width: _width,
-      margin: EdgeInsets.only(top: Dimensions.appBarHeight),
+      margin: EdgeInsets.only(top: Dimensions.appBarHeight + statusbarHeight),
       padding: EdgeInsets.symmetric(vertical: 0.0,horizontal: 20.0),
       decoration: BoxDecoration(
         image: DecorationImage(

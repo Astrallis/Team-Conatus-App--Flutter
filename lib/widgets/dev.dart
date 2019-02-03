@@ -11,13 +11,14 @@ class Devs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double deviceWidth = MediaQuery.of(context).size.width;
+    final double statusbarHeight = MediaQuery.of(context).padding.top;
     final List<Dev> devs = DevData.devData;
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage("assets/images/dev-bg.jpg"), fit: BoxFit.cover),
       ),
-      margin: EdgeInsets.only(top: Dimensions.appBarHeight),
+      margin: EdgeInsets.only(top: Dimensions.appBarHeight+statusbarHeight),
       padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
       child: ListView(
         scrollDirection: Axis.vertical,
