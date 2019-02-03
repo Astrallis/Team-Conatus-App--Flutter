@@ -86,10 +86,7 @@ class RegistrationFormState extends State {
               validator: Validators.validateNotNull,
               decoration: InputDecoration(hintText: "Hostler/Day Scholar"),
               onSaved: (value) {
-                if (value == "Hostler")
-                  this._address = "hostler";
-                else
-                  this._address = "day_scholar";
+                this._address = value;
               },
             ),
             SizedBox(
@@ -159,6 +156,7 @@ class RegistrationFormState extends State {
 
   void _submitForm() {
     String _message;
+    String _isHostler;
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save(); // Save our form now.
 //      Student student = Student(
@@ -171,6 +169,11 @@ class RegistrationFormState extends State {
       setState(() {
         _isLoading = true;
       });
+      if (_address == "Hostler") {
+        _isHostler = "hostler";
+      } else {
+        _isHostler = "day_scholar";
+      }
 
       _auth.post(url: _API_URL, body: {
         "name": this._name,
@@ -179,7 +182,7 @@ class RegistrationFormState extends State {
         "roll_number": this._rollno,
         "contact_number": this._phno,
         "branch": this._branch,
-        "is_hostler": this._address
+        "is_hostler": _isHostler
       }).then((res) {
         setState(() {
           _isLoading = false;
