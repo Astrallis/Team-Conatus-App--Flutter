@@ -35,8 +35,26 @@ class StudentState extends State {
   Widget build(BuildContext context) {
     final double statusbarHeight = MediaQuery.of(context).padding.top;
     if (_message == "Loading...")
-      return Center(
-        child: FadingText("Loading Coordinators..."),
+      return Container(
+        width: MediaQuery.of(context).size.width,
+        color: Colors.black,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                  child: Image.asset(
+                "assets/images/conatus2.png",
+                scale: 3.5,
+              )),
+              Container(
+                  padding: EdgeInsets.only(top: 30),
+                  height: 80,
+                  width: 80,
+                  child: Image.asset(
+                    "assets/images/giphy.gif",
+                    scale: 0.75,
+                  )),
+            ]),
       );
     else if (_message == "Success") {
       List<Coordinator> _coordinator = CoordinatorsData.coordinators;
