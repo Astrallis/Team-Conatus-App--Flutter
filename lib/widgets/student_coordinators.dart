@@ -37,23 +37,21 @@ class StudentState extends State {
     if (_message == "Loading...")
       return Container(
         width: MediaQuery.of(context).size.width,
-        color: Colors.black,
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                  child: Image.asset(
-                "assets/images/conatus2.png",
-                scale: 3.5,
-              )),
-              Container(
-                  padding: EdgeInsets.only(top: 30),
-                  height: 80,
-                  width: 80,
-                  child: Image.asset(
-                    "assets/images/giphy.gif",
-                    scale: 0.75,
-                  )),
+                child: Image.asset(
+                  "assets/images/conatus2.png",
+                  scale: 3.5,
+                ),
+              ),
+              SizedBox(
+                height: Dimensions.gap,
+              ),
+              Center(
+                child: FadingText("Loading Coordinators..."),
+              )
             ]),
       );
     else if (_message == "Success") {
