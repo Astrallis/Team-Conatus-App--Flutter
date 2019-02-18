@@ -96,7 +96,6 @@ class IntroPageItem extends StatelessWidget {
       ),
       child: Material(
         elevation: 4.0,
-        borderRadius: BorderRadius.circular(8.0),
         child: Stack(
           fit: StackFit.expand,
           children: [

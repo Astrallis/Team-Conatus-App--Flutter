@@ -27,17 +27,19 @@ class ConatusAppBar extends StatelessWidget {
         children: <Widget>[
           Container(width: 15.0),
           GestureDetector(
-            child: showDrawer
-                ? Image.asset(
-                    "assets/images/menu.png",
-                    width: Dimensions.iconsWidth,
-                    height: Dimensions.iconsHeight,
-                  )
-                : Image.asset(
-                    "assets/images/back.png",
-                    width: Dimensions.iconsWidth,
-                    height: Dimensions.iconsHeight,
-                  ),
+            child: InkWell(
+              child: showDrawer
+                  ? Image.asset(
+                      "assets/images/menu.png",
+                      width: Dimensions.iconsWidth,
+                      height: Dimensions.iconsHeight,
+                    )
+                  : Image.asset(
+                      "assets/images/back.png",
+                      width: Dimensions.iconsWidth,
+                      height: Dimensions.iconsHeight,
+                    ),
+            ),
             onTap: () {
               if (showDrawer) {
                 Scaffold.of(context).openDrawer();

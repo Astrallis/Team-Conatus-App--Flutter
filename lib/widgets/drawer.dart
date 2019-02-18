@@ -18,7 +18,7 @@ class ConatusDrawer extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             DrawerHeader(
-              child: Image.asset("assets/images/conatus.png"),
+              child: Image.asset("assets/images/conatus2.png"),
             ),
             Container(
               height: 0.4,

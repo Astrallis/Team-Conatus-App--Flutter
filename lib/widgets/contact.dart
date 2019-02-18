@@ -24,10 +24,11 @@ class Contact extends StatelessWidget {
               ),
             ),
             Card(
-              margin: EdgeInsets.symmetric(horizontal: 20.0),
+              margin: EdgeInsets.symmetric(
+                  horizontal: Dimensions.gap * 2, vertical: Dimensions.gap),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0)),
-              color: Color(ConatusColors.ddarkTransparent),
+              color: Color(ConatusColors.darkTransparent),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -63,47 +64,52 @@ class Contact extends StatelessWidget {
                     padding: EdgeInsets.all(15.0),
                   ),
                   Container(height: 0.0),
-                ],
-              ),
-            ),
-            Container(
-              child: new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    child: Image.asset(
-                      "assets/images/fb.png",
-                      scale: 10,
-                    ),
-                    padding: EdgeInsets.fromLTRB(0, 5, 0, 15),
+                  SizedBox(
+                    height: Dimensions.gap,
                   ),
-                  Padding(
-                    child: Text(
-                      "www.facebook.com/conatus.akg",
-                      style: TextStyle(fontSize: ConatusFonts.small),
+                  Container(
+                    child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          child: Image.asset(
+                            "assets/images/fb.png",
+                            width: 22.0,
+                            height: 22.0,
+                          ),
+                          padding: EdgeInsets.fromLTRB(0, 5, 0, 15),
+                        ),
+                        Padding(
+                          child: Text(
+                            "www.facebook.com/conatus.akg",
+                            style: TextStyle(fontSize: ConatusFonts.small),
+                          ),
+                          padding: EdgeInsets.fromLTRB(5, 5, 0, 15),
+                        ),
+                      ],
                     ),
-                    padding: EdgeInsets.fromLTRB(5, 5, 0, 15),
                   ),
-                ],
-              ),
-            ),
-            Container(
-              child: new Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    child: Image.asset(
-                      "assets/images/insta.png",
-                      scale: 12,
+                  Container(
+                    child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          child: Image.asset(
+                            "assets/images/insta.png",
+                            width: 22.0,
+                            height: 22.0,
+                          ),
+                          padding: EdgeInsets.fromLTRB(0, 2, 0, 15),
+                        ),
+                        Padding(
+                          child: Text(
+                            "www.instagram.com/conatus.akg",
+                            style: TextStyle(fontSize: ConatusFonts.small),
+                          ),
+                          padding: EdgeInsets.fromLTRB(5, 2, 0, 15),
+                        ),
+                      ],
                     ),
-                    padding: EdgeInsets.fromLTRB(0, 2, 0, 15),
-                  ),
-                  Padding(
-                    child: Text(
-                      "www.instagram.com/conatus.akg",
-                      style: TextStyle(fontSize: ConatusFonts.small),
-                    ),
-                    padding: EdgeInsets.fromLTRB(5, 2, 0, 15),
                   ),
                 ],
               ),

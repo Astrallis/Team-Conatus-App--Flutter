@@ -37,6 +37,10 @@ class StudentState extends State {
     if (_message == "Loading...")
       return Container(
         width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/images/c-bg.jpeg"), fit: BoxFit.cover),
+        ),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
