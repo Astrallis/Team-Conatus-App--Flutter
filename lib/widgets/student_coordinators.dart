@@ -98,6 +98,7 @@ class StudentState extends State {
                                 style: TextStyle(fontSize: ConatusFonts.least),
                               ),
                             ),
+                            fit: BoxFit.fill,
                             imageUrl: _coordinator[index].imageUrl,
                             width: Dimensions.avatarRadius * 1.6,
                             height: Dimensions.avatarRadius * 1.6,

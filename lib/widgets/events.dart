@@ -25,10 +25,11 @@ class Events extends StatelessWidget {
             return Container(
               padding: EdgeInsets.all(5.0),
               child: Card(
+                color: Color(ConatusColors.colorPrimary),
                 elevation: 10.0,
                 child: Container(
                   padding:
-                      EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
+                      EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0,top:10.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[

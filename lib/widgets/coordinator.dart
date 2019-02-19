@@ -35,6 +35,7 @@ class Coordinator extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(Dimensions.avatarRadius * 1.5),
             child: CachedNetworkImage(
+              fit: BoxFit.fill,
               imageUrl: _coordinator.imageUrl,
               width: Dimensions.avatarRadius * 2.3,
               height: Dimensions.avatarRadius * 2.3,
