@@ -10,7 +10,8 @@ import './tagline.dart';
 class Coordinator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    C.Coordinator _coordinator = CoordinatorsData.selectedCoordinator;
+    CoordinatorsData coordinatorsData = CoordinatorsData.instance;
+    C.Coordinator _coordinator = coordinatorsData.selectedCoordinator;
     String year;
     if (_coordinator.year == Year.second) {
       year = "2nd";

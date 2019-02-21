@@ -8,20 +8,26 @@ import '../utils/conatus_utils.dart';
 class CoordinatorsData {
   static const String _API_URL = "https://conatusinfo-8341f.firebaseio.com";
   ConatusAuth auth = ConatusAuth.instance;
-  static Coordinator _selectedCoordinator;
-  static bool _isLoaded = false;
+  static final CoordinatorsData _coordinatorsData =
+      CoordinatorsData._internal();
 
-  static List<Coordinator> _coordinators = new List();
+  CoordinatorsData._internal();
 
-  static List<Coordinator> get coordinators => _coordinators;
+  static CoordinatorsData get instance => _coordinatorsData;
+  Coordinator _selectedCoordinator;
+  bool _isLoaded = false;
 
-  static Coordinator get selectedCoordinator => _selectedCoordinator;
+  List<Coordinator> _coordinators = new List();
 
-  static setSelectedCoordinator(Coordinator c) {
+  List<Coordinator> get coordinators => _coordinators;
+
+  Coordinator get selectedCoordinator => _selectedCoordinator;
+
+  setSelectedCoordinator(Coordinator c) {
     _selectedCoordinator = c;
   }
 
-  static bool get isLoaded => _isLoaded;
+  bool get isLoaded => _isLoaded;
 
   BehaviorSubject<String> fetchCoordinators() {
     BehaviorSubject<String> subject = new BehaviorSubject();

@@ -16,7 +16,7 @@ class StudentCoordinators extends StatefulWidget {
 }
 
 class StudentState extends State {
-  CoordinatorsData data = CoordinatorsData();
+  CoordinatorsData _coordinatorsData = CoordinatorsData.instance;
   String _message = "Loading...";
   var _subscription;
   int _count = 0;
@@ -59,7 +59,7 @@ class StudentState extends State {
             ]),
       );
     else if (_message == "Success") {
-      List<Coordinator> _coordinator = CoordinatorsData.coordinators;
+      List<Coordinator> _coordinator = _coordinatorsData.coordinators;
 
       return Container(
         decoration: BoxDecoration(
@@ -75,7 +75,7 @@ class StudentState extends State {
                 padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 3.0),
                 child: GestureDetector(
                   onTap: () {
-                    CoordinatorsData.setSelectedCoordinator(
+                    _coordinatorsData.setSelectedCoordinator(
                         _coordinator[index]);
                     Navigator.pushNamed(context, RouterConstants.coordinator);
                   },
@@ -139,8 +139,8 @@ class StudentState extends State {
   }
 
   _loadCoordinators() {
-    if (!CoordinatorsData.isLoaded) {
-      _subscription = data.fetchCoordinators().stream.listen((message) {
+    if (!_coordinatorsData.isLoaded) {
+      _subscription = _coordinatorsData.fetchCoordinators().stream.listen((message) {
         if (_count > 0) {
           setState(() {
             _message = message;
