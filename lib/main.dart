@@ -3,17 +3,15 @@ import 'package:flutter/services.dart' show DeviceOrientation, SystemChrome;
 import 'utils/constants.dart';
 import 'package:flutter_crashlytics/flutter_crashlytics.dart';
 import 'dart:async';
+import './utils/push_notifications.dart';
 
 void main() async {
   bool isInDebugMode = false;
-
+  PushNotifications.configureNotification();
   FlutterError.onError = (FlutterErrorDetails details) {
     if (isInDebugMode) {
-      // In development mode simply print to console.
       FlutterError.dumpErrorToConsole(details);
     } else {
-      // In production mode report to the application zone to report to
-      // Crashlytics.
       Zone.current.handleUncaughtError(details.exception, details.stack);
     }
   };
@@ -35,8 +33,6 @@ void main() async {
         ),
       );
     }, onError: (error, stackTrace) async {
-      // Whenever an error occurs, call the `reportCrash` function. This will send
-      // Dart errors to our dev console or Crashlytics depending on the environment.
       await FlutterCrashlytics()
           .reportCrash(error, stackTrace, forceCrash: false);
     });
