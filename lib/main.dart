@@ -7,7 +7,9 @@ import './utils/push_notifications.dart';
 
 void main() async {
   bool isInDebugMode = false;
-  PushNotifications.configureNotification();
+  PushNotifications pushNotifications = PushNotifications();
+  pushNotifications.configureNotification();
+
   FlutterError.onError = (FlutterErrorDetails details) {
     if (isInDebugMode) {
       FlutterError.dumpErrorToConsole(details);
