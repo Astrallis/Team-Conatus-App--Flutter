@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:162572360803:android:98b3bd9be8628f5d",
+        "mobilesdk_app_id": "1:162572360803:android:132225999f7d7a91",
         "android_client_info": {
-          "package_name": "com.example.conatusapp"
+          "package_name": "com.teamconatus.conatusapp"
         }
       },
       "oauth_client": [
