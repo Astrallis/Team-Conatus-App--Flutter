@@ -15,20 +15,18 @@ class ConatusAuth {
   }
 
   Future post({@required url, body}) {
-    Map<String,String> headers ={
-      "content-type":"application/json"
-    };
+    Map<String, String> headers = {"content-type": "application/json"};
 
     return http.post(url, body: body).catchError(_handleError);
   }
+
   Future put({@required url, body}) {
     return http.post(url, body: body).catchError(_handleError);
   }
 
   _handleError(error) {
-    print("Error aai hai");
+    print("Error aai hai" + error.toString());
     http.Response response = http.Response(error.toString(), 404);
     return response;
   }
-
 }

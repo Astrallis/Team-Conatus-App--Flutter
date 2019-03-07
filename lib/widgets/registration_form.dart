@@ -49,7 +49,7 @@ class RegistrationFormState extends State {
       margin: EdgeInsets.only(top: 20.0, bottom: 10.0),
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Color(ConatusColors.ddarkTransparent),
+        color: Color(ConatusColors.darkTransparent),
         borderRadius: BorderRadius.all(Radius.circular(15.0)),
       ),
       child: Form(
@@ -336,8 +336,8 @@ class RegistrationFormState extends State {
     String _message;
     String _isHostler1;
     String _isHostler2;
-    int _year1;
-    int _year2;
+    String _year1;
+    String _year2;
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save(); // Save our form now.
       setState(() {
@@ -354,24 +354,23 @@ class RegistrationFormState extends State {
         _isHostler2 = "day_scholar";
       }
       if (this._year1 == "1st") {
-        _year1 = 1;
+        _year1 = "1";
       } else if (this._year1 == "2nd") {
-        _year1 = 2;
+        _year1 = "2";
       } else if (this._year1 == "3rd") {
-        _year1 = 3;
+        _year1 = "3";
       } else {
-        _year1 = 4;
+        _year1 = "4";
       }
       if (this._year2 == "1st") {
-        _year2 = 1;
+        _year2 = "1";
       } else if (this._year2 == "2nd") {
-        _year2 = 2;
+        _year2 = "2";
       } else if (this._year2 == "3rd") {
-        _year2 = 3;
+        _year2 = "3";
       } else {
-        _year2 = 4;
+        _year2 = "4";
       }
-
       _auth.post(url: _API_URL, body: {
         "name": this._name1,
         "email": this._email1,
@@ -395,6 +394,7 @@ class RegistrationFormState extends State {
         setState(() {
           _isLoading = false;
           Map response = json.decode(res.body);
+          print(response.toString());
           if (response["data"] != null) {
             _message =
                 "You are registered successfully, please check your email!!";
@@ -467,7 +467,7 @@ class RegistrationFormState extends State {
   }
 
   List<DropdownMenuItem<String>> getGender() {
-    return <String>["Male", "Female"].map((value) {
+    return <String>["male", "female"].map((value) {
       return DropdownMenuItem(
         value: value,
         child: Text(value),

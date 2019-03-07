@@ -17,7 +17,7 @@ class CRegistration extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 0.0,horizontal: 20.0),
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/register-bg.jpeg"),
+            image: AssetImage("assets/images/doc.png"),
             fit: BoxFit.fill,repeat: ImageRepeat.noRepeat),
       ),
         child: SingleChildScrollView(
