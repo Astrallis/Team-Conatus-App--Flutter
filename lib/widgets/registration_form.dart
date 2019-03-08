@@ -409,22 +409,22 @@ class RegistrationFormState extends State {
             this._year2 = null;
           } else if (response["status_code"] != null) {
             if (response["errors"]["email"] != null) {
-              _message = "Team member 1 email already exists!!";
+              _message = "It seems like team member 1 email already exists or is incorrect!!";
             }
             if (response["errors"]["student_number"] != null) {
-              _message = "Team member 1 student number already exists!!";
+              _message = "It seems like team member 1 student number already exists or is incorrect!!";
             }
             if (response["errors"]["roll_number"] != null) {
-              _message = "Team member 1 roll number already exists!!";
+              _message = "It seems like team member 1 roll number already exists or is incorrect!!";
             }
             if (response["errors"]["email_sec"] != null) {
-              _message = "Team member 2 email already exists!!";
+              _message = "It seems like team member 2 email already exists or is incorrect!!";
             }
             if (response["errors"]["student_number_sec"] != null) {
-              _message = "Team member 2 student number already exists!!";
+              _message = "It seems like team member 2 student number already exists or is incorrect!!";
             }
             if (response["errors"]["roll_number_sec"] != null) {
-              _message = "Team member 2 roll number already exists!!";
+              _message = "It seems like team member 2 roll number already exists or is incorrect!!";
             }
           }
           showDialog(
